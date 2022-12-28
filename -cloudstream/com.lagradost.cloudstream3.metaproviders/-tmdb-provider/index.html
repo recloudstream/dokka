@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>TmdbProvider</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            Cloudstream
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":docs:dokkaHtml/cloudstream">cloudstream</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="Cloudstream::com.lagradost.cloudstream3.metaproviders/TmdbProvider///PointingToDeclaration//1933467962">
+  <div class="breadcrumbs"><a href="../../../index.html">Cloudstream</a><span class="delimiter">/</span><a href="../index.html">com.lagradost.cloudstream3.metaproviders</a><span class="delimiter">/</span><span class="current">TmdbProvider</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Tmdb</span><wbr></wbr><span><span>Provider</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">TmdbProvider</a> : <a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/recloudstream/cloudstream/tree/master/app/src/main/java/com/lagradost/cloudstream3/metaproviders/TmdbProvider.kt#L28">source</a>)</span></span></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-cross-tmdb-provider/index.html">CrossTmdbProvider</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-632908958%2FConstructors%2F1933467962" anchor-label="TmdbProvider" id="-632908958%2FConstructors%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tmdb-provider.html"><span>Tmdb</span><wbr></wbr><span><span>Provider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-632908958%2FConstructors%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1372071701%2FProperties%2F1933467962" anchor-label="apiName" id="-1372071701%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="api-name.html"><span>api</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1372071701%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="api-name.html">apiName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1598807417%2FProperties%2F1933467962" anchor-label="canBeOverridden" id="-1598807417%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/can-be-overridden.html"><span>can</span><wbr></wbr><span>Be</span><wbr></wbr><span><span>Overridden</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1598807417%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/can-be-overridden.html">canBeOverridden</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="927301501%2FProperties%2F1933467962" anchor-label="disableSeasonZero" id="927301501%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="disable-season-zero.html"><span>disable</span><wbr></wbr><span>Season</span><wbr></wbr><span><span>Zero</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="927301501%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="disable-season-zero.html">disableSeasonZero</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1708580528%2FProperties%2F1933467962" anchor-label="hasChromecastSupport" id="-1708580528%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/has-chromecast-support.html"><span>has</span><wbr></wbr><span>Chromecast</span><wbr></wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1708580528%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/has-chromecast-support.html">hasChromecastSupport</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">Set false if links require referer or for some reason cant be played on a chromecast</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-422263969%2FProperties%2F1933467962" anchor-label="hasDownloadSupport" id="-422263969%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/has-download-support.html"><span>has</span><wbr></wbr><span>Download</span><wbr></wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-422263969%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/has-download-support.html">hasDownloadSupport</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">If all links are encrypted then set this to false</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="486568238%2FProperties%2F1933467962" anchor-label="hasMainPage" id="486568238%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="has-main-page.html"><span>has</span><wbr></wbr><span>Main</span><wbr></wbr><span><span>Page</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="486568238%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="has-main-page.html">hasMainPage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2134640687%2FProperties%2F1933467962" anchor-label="hasQuickSearch" id="-2134640687%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/has-quick-search.html"><span>has</span><wbr></wbr><span>Quick</span><wbr></wbr><span><span>Search</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2134640687%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/has-quick-search.html">hasQuickSearch</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1956545688%2FProperties%2F1933467962" anchor-label="includeAdult" id="1956545688%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="include-adult.html"><span>include</span><wbr></wbr><span><span>Adult</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1956545688%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="include-adult.html">includeAdult</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1434562251%2FProperties%2F1933467962" anchor-label="instantLinkLoading" id="1434562251%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/instant-link-loading.html"><span>instant</span><wbr></wbr><span>Link</span><wbr></wbr><span><span>Loading</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1434562251%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/instant-link-loading.html">instantLinkLoading</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">If link is stored in the &quot;data&quot; string, so links can be instantly loaded</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1469468930%2FProperties%2F1933467962" anchor-label="lang" id="-1469468930%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/lang.html"><span><span>lang</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1469468930%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/lang.html">lang</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1224672131%2FProperties%2F1933467962" anchor-label="lastHomepageRequest" id="1224672131%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/last-homepage-request.html"><span>last</span><wbr></wbr><span>Homepage</span><wbr></wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1224672131%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/last-homepage-request.html">lastHomepageRequest</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">used to keep track when last homepage request was in unixtime ms</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1165269308%2FProperties%2F1933467962" anchor-label="mainPage" id="-1165269308%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/main-page.html"><span>main</span><wbr></wbr><span><span>Page</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1165269308%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/main-page.html">mainPage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-main-page-data/index.html">MainPageData</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1470929992%2FProperties%2F1933467962" anchor-label="mainUrl" id="-1470929992%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/main-url.html"><span>main</span><wbr></wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1470929992%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/main-url.html">mainUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1106919167%2FProperties%2F1933467962" anchor-label="name" id="-1106919167%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1106919167%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="928454623%2FProperties%2F1933467962" anchor-label="providerType" id="928454623%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="provider-type.html"><span>provider</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="928454623%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="provider-type.html">providerType</a><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-provider-type/index.html">ProviderType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2049735995%2FProperties%2F1933467962" anchor-label="sequentialMainPage" id="-2049735995%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/sequential-main-page.html"><span>sequential</span><wbr></wbr><span>Main</span><wbr></wbr><span><span>Page</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2049735995%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/sequential-main-page.html">sequentialMainPage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">if this is turned on then it will request the homepage one after the other, used to delay if they block many request at the same time</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1021876814%2FProperties%2F1933467962" anchor-label="sequentialMainPageDelay" id="-1021876814%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/sequential-main-page-delay.html"><span>sequential</span><wbr></wbr><span>Main</span><wbr></wbr><span>Page</span><wbr></wbr><span><span>Delay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1021876814%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/sequential-main-page-delay.html">sequentialMainPageDelay</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">in milliseconds, this can be used to add more delay between homepage requests on first load if sequentialMainPage is turned on</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1356217889%2FProperties%2F1933467962" anchor-label="sequentialMainPageScrollDelay" id="-1356217889%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/sequential-main-page-scroll-delay.html"><span>sequential</span><wbr></wbr><span>Main</span><wbr></wbr><span>Page</span><wbr></wbr><span>Scroll</span><wbr></wbr><span><span>Delay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1356217889%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/sequential-main-page-scroll-delay.html">sequentialMainPageScrollDelay</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">in milliseconds, this can be used to add more delay between homepage requests when scrolling</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="741492414%2FProperties%2F1933467962" anchor-label="sourcePlugin" id="741492414%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/source-plugin.html"><span>source</span><wbr></wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="741492414%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/source-plugin.html">sourcePlugin</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Determines which plugin a given provider is from. This is the full path to the plugin.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="577645941%2FProperties%2F1933467962" anchor-label="storedCredentials" id="577645941%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/stored-credentials.html"><span>stored</span><wbr></wbr><span><span>Credentials</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="577645941%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/stored-credentials.html">storedCredentials</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="781229933%2FProperties%2F1933467962" anchor-label="supportedSyncNames" id="781229933%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/supported-sync-names.html"><span>supported</span><wbr></wbr><span>Sync</span><wbr></wbr><span><span>Names</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="781229933%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/supported-sync-names.html">supportedSyncNames</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3.syncproviders/-sync-id-name/index.html">SyncIdName</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A set of which ids the provider can open with getLoadUrl() If the set contains SyncIdName.Imdb then getLoadUrl() can be started with an Imdb class which inherits from SyncId.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1526761569%2FProperties%2F1933467962" anchor-label="supportedTypes" id="1526761569%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/supported-types.html"><span>supported</span><wbr></wbr><span><span>Types</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1526761569%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/supported-types.html">supportedTypes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-tv-type/index.html">TvType</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1576707677%2FProperties%2F1933467962" anchor-label="useMetaLoadResponse" id="1576707677%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="use-meta-load-response.html"><span>use</span><wbr></wbr><span>Meta</span><wbr></wbr><span>Load</span><wbr></wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1576707677%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="use-meta-load-response.html">useMetaLoadResponse</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-75533983%2FProperties%2F1933467962" anchor-label="usesWebView" id="-75533983%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/uses-web-view.html"><span>uses</span><wbr></wbr><span>Web</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-75533983%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/uses-web-view.html">usesWebView</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">Used for testing and can be used to disable the providers if WebView is not available</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-698797976%2FProperties%2F1933467962" anchor-label="vpnStatus" id="-698797976%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/vpn-status.html"><span>vpn</span><wbr></wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-698797976%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/vpn-status.html">vpnStatus</a><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-v-p-n-status/index.html">VPNStatus</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1206150888%2FFunctions%2F1933467962" anchor-label="extractorVerifierJob" id="1206150888%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/extractor-verifier-job.html"><span>extractor</span><wbr></wbr><span>Verifier</span><wbr></wbr><span><span>Job</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1206150888%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/extractor-verifier-job.html"><span class="token function">extractorVerifierJob</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">extractorData<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Largely redundant feature for most providers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1223088196%2FFunctions%2F1933467962" anchor-label="fetchContentRating" id="-1223088196%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fetch-content-rating.html"><span>fetch</span><wbr></wbr><span>Content</span><wbr></wbr><span><span>Rating</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1223088196%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="fetch-content-rating.html"><span class="token function">fetchContentRating</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">country<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1287502098%2FFunctions%2F1933467962" anchor-label="fixUrl" id="-1287502098%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/fix-url.html"><span>fix</span><wbr></wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1287502098%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/fix-url.html"><span class="token function">fixUrl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-525776146%2FFunctions%2F1933467962" anchor-label="fixUrlNull" id="-525776146%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/fix-url-null.html"><span>fix</span><wbr></wbr><span>Url</span><wbr></wbr><span><span>Null</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-525776146%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/fix-url-null.html"><span class="token function">fixUrlNull</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2117800828%2FFunctions%2F1933467962" anchor-label="getLoadUrl" id="-2117800828%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/get-load-url.html"><span>get</span><wbr></wbr><span>Load</span><wbr></wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2117800828%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/get-load-url.html"><span class="token function">getLoadUrl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.syncproviders/-sync-id-name/index.html">SyncIdName</a><span class="token punctuation">, </span></span><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Get the load() url based on a sync ID like IMDb or MAL. Only contains SyncIds based on supportedSyncUrls.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="750580106%2FFunctions%2F1933467962" anchor-label="getMainPage" id="750580106%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-main-page.html"><span>get</span><wbr></wbr><span>Main</span><wbr></wbr><span><span>Page</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="750580106%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="get-main-page.html"><span class="token function">getMainPage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">page<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">request<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-main-page-request/index.html">MainPageRequest</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-home-page-response/index.html">HomePageResponse</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-894448465%2FFunctions%2F1933467962" anchor-label="getVideoInterceptor" id="-894448465%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/get-video-interceptor.html"><span>get</span><wbr></wbr><span>Video</span><wbr></wbr><span><span>Interceptor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-894448465%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/get-video-interceptor.html"><span class="token function">getVideoInterceptor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">extractorLink<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.utils/-extractor-link/index.html">ExtractorLink</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="okhttp3/Interceptor///PointingToDeclaration/">Interceptor</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">An okhttp interceptor for used in OkHttpDataSource</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1619740188%2FFunctions%2F1933467962" anchor-label="init" id="1619740188%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/init.html"><span><span>init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1619740188%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/init.html"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-949457312%2FFunctions%2F1933467962" anchor-label="load" id="-949457312%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="load.html"><span><span>load</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-949457312%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="load.html"><span class="token function">load</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-load-response/index.html">LoadResponse</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Based on data from search() or getMainPage() it generates a LoadResponse, basically opening the info page from a link.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1665527785%2FFunctions%2F1933467962" anchor-label="loadFromImdb" id="1665527785%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="load-from-imdb.html"><span>load</span><wbr></wbr><span>From</span><wbr></wbr><span><span>Imdb</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1665527785%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="load-from-imdb.html"><span class="token function">loadFromImdb</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">imdb<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-load-response/index.html">LoadResponse</a><span class="token operator">?</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="load-from-imdb.html"><span class="token function">loadFromImdb</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">imdb<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">seasons<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="com.uwetrottmann.tmdb2.entities/TvSeason///PointingToDeclaration/">TvSeason</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-load-response/index.html">LoadResponse</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-315784017%2FFunctions%2F1933467962" anchor-label="loadFromTmdb" id="-315784017%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="load-from-tmdb.html"><span>load</span><wbr></wbr><span>From</span><wbr></wbr><span><span>Tmdb</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-315784017%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="load-from-tmdb.html"><span class="token function">loadFromTmdb</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tmdb<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-load-response/index.html">LoadResponse</a><span class="token operator">?</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="load-from-tmdb.html"><span class="token function">loadFromTmdb</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tmdb<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">seasons<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="com.uwetrottmann.tmdb2.entities/TvSeason///PointingToDeclaration/">TvSeason</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-load-response/index.html">LoadResponse</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-930139416%2FFunctions%2F1933467962" anchor-label="loadLinks" id="-930139416%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/load-links.html"><span>load</span><wbr></wbr><span><span>Links</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-930139416%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/load-links.html"><span class="token function">loadLinks</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">isCasting<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">subtitleCallback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-subtitle-file/index.html">SubtitleFile</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3.utils/-extractor-link/index.html">ExtractorLink</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Callback is fired once a link is found, will return true if method is executed successfully</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1617775309%2FFunctions%2F1933467962" anchor-label="newAnimeLoadResponse" id="1617775309%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/new-anime-load-response.html"><span>new</span><wbr></wbr><span>Anime</span><wbr></wbr><span>Load</span><wbr></wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1617775309%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/new-anime-load-response.html"><span class="token function">newAnimeLoadResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-tv-type/index.html">TvType</a><span class="token punctuation">, </span></span><span class="parameter ">comingSoonIfNone<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">initializer<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-anime-load-response/index.html">AnimeLoadResponse</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ }</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-anime-load-response/index.html">AnimeLoadResponse</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1688010552%2FFunctions%2F1933467962" anchor-label="newAnimeSearchResponse" id="-1688010552%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/new-anime-search-response.html"><span>new</span><wbr></wbr><span>Anime</span><wbr></wbr><span>Search</span><wbr></wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1688010552%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/new-anime-search-response.html"><span class="token function">newAnimeSearchResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-tv-type/index.html">TvType</a><span class="token operator"> = </span>TvType.Anime<span class="token punctuation">, </span></span><span class="parameter ">fix<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">initializer<span class="token operator">: </span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-anime-search-response/index.html">AnimeSearchResponse</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ }</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-anime-search-response/index.html">AnimeSearchResponse</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1284010238%2FFunctions%2F1933467962" anchor-label="newEpisode" id="1284010238%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/new-episode.html"><span>new</span><wbr></wbr><span><span>Episode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1284010238%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/new-episode.html">T</a><span class="token operator">&gt; </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/new-episode.html"><span class="token function">newEpisode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/new-episode.html">T</a><span class="token punctuation">, </span></span><span class="parameter ">initializer<span class="token operator">: </span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-episode/index.html">Episode</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ }</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-episode/index.html">Episode</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/new-episode.html"><span class="token function">newEpisode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">initializer<span class="token operator">: </span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-episode/index.html">Episode</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ }<span class="token punctuation">, </span></span><span class="parameter ">fix<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-episode/index.html">Episode</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1763979393%2FFunctions%2F1933467962" anchor-label="newMovieLoadResponse" id="1763979393%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/new-movie-load-response.html"><span>new</span><wbr></wbr><span>Movie</span><wbr></wbr><span>Load</span><wbr></wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1763979393%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/new-movie-load-response.html">T</a><span class="token operator">&gt; </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/new-movie-load-response.html"><span class="token function">newMovieLoadResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-tv-type/index.html">TvType</a><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/new-movie-load-response.html">T</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">initializer<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-movie-load-response/index.html">MovieLoadResponse</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ }</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-movie-load-response/index.html">MovieLoadResponse</a></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/new-movie-load-response.html"><span class="token function">newMovieLoadResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-tv-type/index.html">TvType</a><span class="token punctuation">, </span></span><span class="parameter ">dataUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">initializer<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-movie-load-response/index.html">MovieLoadResponse</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ }</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-movie-load-response/index.html">MovieLoadResponse</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1289652288%2FFunctions%2F1933467962" anchor-label="newMovieSearchResponse" id="1289652288%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/new-movie-search-response.html"><span>new</span><wbr></wbr><span>Movie</span><wbr></wbr><span>Search</span><wbr></wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1289652288%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/new-movie-search-response.html"><span class="token function">newMovieSearchResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-tv-type/index.html">TvType</a><span class="token operator"> = </span>TvType.Movie<span class="token punctuation">, </span></span><span class="parameter ">fix<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">initializer<span class="token operator">: </span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-movie-search-response/index.html">MovieSearchResponse</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ }</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-movie-search-response/index.html">MovieSearchResponse</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="63380785%2FFunctions%2F1933467962" anchor-label="newTvSeriesLoadResponse" id="63380785%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/new-tv-series-load-response.html"><span>new</span><wbr></wbr><span>Tv</span><wbr></wbr><span>Series</span><wbr></wbr><span>Load</span><wbr></wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="63380785%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/new-tv-series-load-response.html"><span class="token function">newTvSeriesLoadResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-tv-type/index.html">TvType</a><span class="token punctuation">, </span></span><span class="parameter ">episodes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-episode/index.html">Episode</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">initializer<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-tv-series-load-response/index.html">TvSeriesLoadResponse</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ }</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-tv-series-load-response/index.html">TvSeriesLoadResponse</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="175055644%2FFunctions%2F1933467962" anchor-label="newTvSeriesSearchResponse" id="175055644%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/new-tv-series-search-response.html"><span>new</span><wbr></wbr><span>Tv</span><wbr></wbr><span>Series</span><wbr></wbr><span>Search</span><wbr></wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="175055644%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/index.html">MainAPI</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3/new-tv-series-search-response.html"><span class="token function">newTvSeriesSearchResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-tv-type/index.html">TvType</a><span class="token operator"> = </span>TvType.TvSeries<span class="token punctuation">, </span></span><span class="parameter ">fix<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">initializer<span class="token operator">: </span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-tv-series-search-response/index.html">TvSeriesSearchResponse</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ }</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-tv-series-search-response/index.html">TvSeriesSearchResponse</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1207370336%2FFunctions%2F1933467962" anchor-label="overrideWithNewData" id="-1207370336%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/override-with-new-data.html"><span>override</span><wbr></wbr><span>With</span><wbr></wbr><span>New</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1207370336%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/override-with-new-data.html"><span class="token function">overrideWithNewData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-providers-info-json/index.html">ProvidersInfoJson</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1907834229%2FFunctions%2F1933467962" anchor-label="quickSearch" id="-1907834229%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3/-main-a-p-i/quick-search.html"><span>quick</span><wbr></wbr><span><span>Search</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1907834229%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3/-main-a-p-i/quick-search.html"><span class="token function">quickSearch</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">query<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-search-response/index.html">SearchResponse</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1663937310%2FFunctions%2F1933467962" anchor-label="search" id="-1663937310%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="search.html"><span><span>search</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1663937310%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="search.html"><span class="token function">search</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">query<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../com.lagradost.cloudstream3/-search-response/index.html">SearchResponse</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
