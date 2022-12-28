@@ -1,0 +1,501 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Callbacks</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    Cloudstream
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":app/prereleaseDebug">JVM</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":app/prereleaseDebug" data-filter=":app/prereleaseDebug">
+                                <span class="checkbox--icon"></span>
+                                JVM
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Cloudstream
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="App::com.lagradost.cloudstream3.ui.player/PlayerView.Callbacks///PointingToDeclaration//-1280901913">
+  <div class="breadcrumbs"><a href="../../../index.html">App</a><span class="delimiter">/</span><a href="../../index.html">com.lagradost.cloudstream3.ui.player</a><span class="delimiter">/</span><a href="../index.html">PlayerView</a><span class="delimiter">/</span><span class="current">Callbacks</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Callbacks</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Callbacks</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/recloudstream/cloudstream/tree/master/app/src/main/java/com/lagradost/cloudstream3/ui/player/PlayerView.kt#L114">source</a>)</span></span></div><p class="paragraph">Host-fragment-level callbacks invoked by <a href="../main-callback.html">mainCallback</a>.</p><h4 class="tableheader">Inheritors</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../-abstract-player-fragment/index.html">AbstractPlayerFragment</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../com.lagradost.cloudstream3.ui.result/-result-fragment-phone/index.html">ResultFragmentPhone</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1562932795%2FFunctions%2F-1280901913" anchor-label="embeddedSubtitlesFetched" id="-1562932795%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="embedded-subtitles-fetched.html"><span>embedded</span><wbr><span>Subtitles</span><wbr><span><span>Fetched</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1562932795%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="embedded-subtitles-fetched.html"><span class="token function">embeddedSubtitlesFetched</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">subtitles<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../-subtitle-data/index.html">SubtitleData</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1046111245%2FFunctions%2F-1280901913" anchor-label="exitedPipMode" id="-1046111245%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exited-pip-mode.html"><span>exited</span><wbr><span>Pip</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1046111245%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="exited-pip-mode.html"><span class="token function">exitedPipMode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1859014372%2FFunctions%2F-1280901913" anchor-label="hasNextMirror" id="1859014372%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="has-next-mirror.html"><span>has</span><wbr><span>Next</span><wbr><span><span>Mirror</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1859014372%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="has-next-mirror.html"><span class="token function">hasNextMirror</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1843969495%2FFunctions%2F-1280901913" anchor-label="isUIShowing" id="-1843969495%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-u-i-showing.html"><span>is</span><wbr><span><span>UIShowing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1843969495%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="is-u-i-showing.html"><span class="token function">isUIShowing</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Returns whether the player UI (controls overlay) is currently visible.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1519563160%2FFunctions%2F-1280901913" anchor-label="nextEpisode" id="-1519563160%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="next-episode.html"><span>next</span><wbr><span><span>Episode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1519563160%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="next-episode.html"><span class="token function">nextEpisode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-683920424%2FFunctions%2F-1280901913" anchor-label="nextMirror" id="-683920424%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="next-mirror.html"><span>next</span><wbr><span><span>Mirror</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-683920424%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="next-mirror.html"><span class="token function">nextMirror</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-715436986%2FFunctions%2F-1280901913" anchor-label="onAutoHideUI" id="-715436986%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-auto-hide-u-i.html"><span>on</span><wbr><span>Auto</span><wbr><span>Hide</span><wbr><span><span>UI</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-715436986%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-auto-hide-u-i.html"><span class="token function">onAutoHideUI</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called when the auto-hide timer fires: UI is showing, no touch is active. Implement to hide the player controls.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-627280415%2FFunctions%2F-1280901913" anchor-label="onBrightnessExtra" id="-627280415%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-brightness-extra.html"><span>on</span><wbr><span>Brightness</span><wbr><span><span>Extra</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-627280415%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-brightness-extra.html"><span class="token function">onBrightnessExtra</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">alpha<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called during brightness swipe with the current extra-brightness alpha (0–1).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-42279322%2FFunctions%2F-1280901913" anchor-label="onDownload" id="-42279322%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-download.html"><span>on</span><wbr><span><span>Download</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-42279322%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-download.html"><span class="token function">onDownload</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="../../-download-event/index.html">DownloadEvent</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2068791366%2FFunctions%2F-1280901913" anchor-label="onGestureEnd" id="2068791366%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-gesture-end.html"><span>on</span><wbr><span>Gesture</span><wbr><span><span>End</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2068791366%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-gesture-end.html"><span class="token function">onGestureEnd</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">hadSwipe<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">wasUiShowing<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called at the end of each touch sequence.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1415001684%2FFunctions%2F-1280901913" anchor-label="onHidePlayerUI" id="1415001684%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-hide-player-u-i.html"><span>on</span><wbr><span>Hide</span><wbr><span>Player</span><wbr><span><span>UI</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1415001684%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-hide-player-u-i.html"><span class="token function">onHidePlayerUI</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called when a swipe gesture begins; hide the player UI if desired.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1866309935%2FFunctions%2F-1280901913" anchor-label="onHoldSpeedUp" id="-1866309935%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-hold-speed-up.html"><span>on</span><wbr><span>Hold</span><wbr><span>Speed</span><wbr><span><span>Up</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1866309935%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-hold-speed-up.html"><span class="token function">onHoldSpeedUp</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">show<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called when the hold-for-speedup gesture starts (show=true) or ends (show=false).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1566575537%2FFunctions%2F-1280901913" anchor-label="onSeekPreviewText" id="1566575537%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-seek-preview-text.html"><span>on</span><wbr><span>Seek</span><wbr><span>Preview</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1566575537%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-seek-preview-text.html"><span class="token function">onSeekPreviewText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called with seek-preview text during a horizontal-swipe, or null to clear it.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1324950868%2FFunctions%2F-1280901913" anchor-label="onSingleTap" id="1324950868%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-single-tap.html"><span>on</span><wbr><span>Single</span><wbr><span><span>Tap</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1324950868%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-single-tap.html"><span class="token function">onSingleTap</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called on a short single-tap on empty player area (no swipe, no double-tap).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-137305962%2FFunctions%2F-1280901913" anchor-label="onTimestamp" id="-137305962%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-timestamp.html"><span>on</span><wbr><span><span>Timestamp</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-137305962%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-timestamp.html"><span class="token function">onTimestamp</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">timestamp<span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.utils.videoskip/-video-skip-stamp/index.html">VideoSkipStamp</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2106273205%2FFunctions%2F-1280901913" anchor-label="onTimestampSkipped" id="2106273205%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-timestamp-skipped.html"><span>on</span><wbr><span>Timestamp</span><wbr><span><span>Skipped</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2106273205%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-timestamp-skipped.html"><span class="token function">onTimestampSkipped</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">timestamp<span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.utils.videoskip/-video-skip-stamp/index.html">VideoSkipStamp</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-567845426%2FFunctions%2F-1280901913" anchor-label="onTouchDown" id="-567845426%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-touch-down.html"><span>on</span><wbr><span>Touch</span><wbr><span><span>Down</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-567845426%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-touch-down.html"><span class="token function">onTouchDown</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called on a valid ACTION_DOWN; use for e.g. dismissing an episode overlay.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1864544881%2FFunctions%2F-1280901913" anchor-label="onTracksInfoChanged" id="1864544881%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-tracks-info-changed.html"><span>on</span><wbr><span>Tracks</span><wbr><span>Info</span><wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1864544881%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="on-tracks-info-changed.html"><span class="token function">onTracksInfoChanged</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1125104776%2FFunctions%2F-1280901913" anchor-label="playerDimensionsLoaded" id="1125104776%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="player-dimensions-loaded.html"><span>player</span><wbr><span>Dimensions</span><wbr><span><span>Loaded</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1125104776%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="player-dimensions-loaded.html"><span class="token function">playerDimensionsLoaded</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="729759062%2FFunctions%2F-1280901913" anchor-label="playerError" id="729759062%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="player-error.html"><span>player</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="729759062%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="player-error.html"><span class="token function">playerError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">exception<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="155645453%2FFunctions%2F-1280901913" anchor-label="playerPositionChanged" id="155645453%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="player-position-changed.html"><span>player</span><wbr><span>Position</span><wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="155645453%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="player-position-changed.html"><span class="token function">playerPositionChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">position<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">duration<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1833060337%2FFunctions%2F-1280901913" anchor-label="playerStatusChanged" id="-1833060337%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="player-status-changed.html"><span>player</span><wbr><span>Status</span><wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1833060337%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="player-status-changed.html"><span class="token function">playerStatusChanged</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1089679212%2FFunctions%2F-1280901913" anchor-label="playerUpdated" id="1089679212%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="player-updated.html"><span>player</span><wbr><span><span>Updated</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1089679212%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="player-updated.html"><span class="token function">playerUpdated</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">player<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called after <a href="../index.html">PlayerView</a> finishes its own player-attached setup (MediaSession, ExoPlayer view).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="960587176%2FFunctions%2F-1280901913" anchor-label="prevEpisode" id="960587176%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prev-episode.html"><span>prev</span><wbr><span><span>Episode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="960587176%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="prev-episode.html"><span class="token function">prevEpisode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1896610383%2FFunctions%2F-1280901913" anchor-label="subtitlesChanged" id="-1896610383%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="subtitles-changed.html"><span>subtitles</span><wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1896610383%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="subtitles-changed.html"><span class="token function">subtitlesChanged</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
