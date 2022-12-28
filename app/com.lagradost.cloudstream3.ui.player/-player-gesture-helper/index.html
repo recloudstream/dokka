@@ -1,0 +1,1038 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PlayerGestureHelper</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Cloudstream
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":app/prereleaseDebug">JVM</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":app/prereleaseDebug" data-filter=":app/prereleaseDebug">
+                                <span class="checkbox--icon"></span>
+                                JVM
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Cloudstream
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="App::com.lagradost.cloudstream3.ui.player/PlayerGestureHelper///PointingToDeclaration//-1280901913">
+  <div class="breadcrumbs"><a href="../../index.html">App</a><span class="delimiter">/</span><a href="../index.html">com.lagradost.cloudstream3.ui.player</a><span class="delimiter">/</span><span class="current">PlayerGestureHelper</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Player</span><wbr><span>Gesture</span><wbr><span><span>Helper</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">PlayerGestureHelper</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">playerView<span class="token operator">: </span><a href="../-player-view/index.html">PlayerView</a></span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/recloudstream/cloudstream/tree/master/app/src/main/java/com/lagradost/cloudstream3/ui/player/PlayerGestureHelper.kt#L63">source</a>)</span></span></div><p class="paragraph">Handles all gesture, volume, brightness, speed-up, zoom, and hardware-key-event input for a <a href="../-player-view/index.html">PlayerView</a>.  Keeps these separate from the player-view setup and lifecycle code in <a href="../-player-view/index.html">PlayerView</a> itself.</p><p class="paragraph">Instantiated and owned by <a href="../-player-view/index.html">PlayerView</a>; accessed from host fragments via the delegate properties <a href="../-player-view/index.html">PlayerView</a> exposes.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="1475055601%2FConstructors%2F-1280901913" anchor-label="PlayerGestureHelper" id="1475055601%2FConstructors%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-player-gesture-helper.html"><span>Player</span><wbr><span>Gesture</span><wbr><span><span>Helper</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1475055601%2FConstructors%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">playerView<span class="token operator">: </span><a href="../-player-view/index.html">PlayerView</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1374048685%2FClasslikes%2F-1280901913" anchor-label="Companion" id="-1374048685%2FClasslikes%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1374048685%2FClasslikes%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1698517930%2FClasslikes%2F-1280901913" anchor-label="TouchAction" id="1698517930%2FClasslikes%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-touch-action/index.html"><span>Touch</span><wbr><span><span>Action</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1698517930%2FClasslikes%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-touch-action/index.html">TouchAction</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-touch-action/index.html">PlayerGestureHelper.TouchAction</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="371785773%2FProperties%2F-1280901913" anchor-label="brightnessOverlay" id="371785773%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="brightness-overlay.html"><span>brightness</span><wbr><span><span>Overlay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="371785773%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="brightness-overlay.html">brightnessOverlay</a><span class="token operator">: </span><span data-unresolved-link="android.view/View///PointingToDeclaration/">View</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">White overlay inflated into exo_content_frame; alpha encodes extra brightness (0–1).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-782282234%2FProperties%2F-1280901913" anchor-label="currentExtraBrightness" id="-782282234%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-extra-brightness.html"><span>current</span><wbr><span>Extra</span><wbr><span><span>Brightness</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-782282234%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="current-extra-brightness.html">currentExtraBrightness</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-181442968%2FProperties%2F-1280901913" anchor-label="currentLastTouchAction" id="-181442968%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-last-touch-action.html"><span>current</span><wbr><span>Last</span><wbr><span>Touch</span><wbr><span><span>Action</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-181442968%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="current-last-touch-action.html">currentLastTouchAction</a><span class="token operator">: </span><a href="-touch-action/index.html">PlayerGestureHelper.TouchAction</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Action from the previous touch sequence; guards against mis-detected double-taps after swipes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-85705496%2FProperties%2F-1280901913" anchor-label="currentRequestedBrightness" id="-85705496%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-requested-brightness.html"><span>current</span><wbr><span>Requested</span><wbr><span><span>Brightness</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-85705496%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="current-requested-brightness.html">currentRequestedBrightness</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">Brightness state</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1585081281%2FProperties%2F-1280901913" anchor-label="currentRequestedVolume" id="-1585081281%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-requested-volume.html"><span>current</span><wbr><span>Requested</span><wbr><span><span>Volume</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1585081281%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="current-requested-volume.html">currentRequestedVolume</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">Volume state</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1555081294%2FProperties%2F-1280901913" anchor-label="currentTouchAction" id="-1555081294%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-touch-action.html"><span>current</span><wbr><span>Touch</span><wbr><span><span>Action</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1555081294%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="current-touch-action.html">currentTouchAction</a><span class="token operator">: </span><a href="-touch-action/index.html">PlayerGestureHelper.TouchAction</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Current in-progress swipe action, null when no swipe is active.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="24024817%2FProperties%2F-1280901913" anchor-label="desiredMatrix" id="24024817%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="desired-matrix.html"><span>desired</span><wbr><span><span>Matrix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="24024817%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="desired-matrix.html">desiredMatrix</a><span class="token operator">: </span><span data-unresolved-link="android.graphics/Matrix///PointingToDeclaration/">Matrix</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The matrix the zoom will animate to after the user lifts fingers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1695793761%2FProperties%2F-1280901913" anchor-label="doubleTapEnabled" id="-1695793761%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="double-tap-enabled.html"><span>double</span><wbr><span>Tap</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1695793761%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="double-tap-enabled.html">doubleTapEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Whether double-tapping left/right seeks backward/forward.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1347910257%2FProperties%2F-1280901913" anchor-label="doubleTapPauseEnabled" id="-1347910257%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="double-tap-pause-enabled.html"><span>double</span><wbr><span>Tap</span><wbr><span>Pause</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1347910257%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="double-tap-pause-enabled.html">doubleTapPauseEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Whether double-tapping the center of the screen pauses (left/right still seeks if <a href="double-tap-enabled.html">doubleTapEnabled</a>).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1990935730%2FProperties%2F-1280901913" anchor-label="extraBrightnessEnabled" id="-1990935730%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="extra-brightness-enabled.html"><span>extra</span><wbr><span>Brightness</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1990935730%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="extra-brightness-enabled.html">extraBrightnessEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1339679062%2FProperties%2F-1280901913" anchor-label="fastForwardTime" id="1339679062%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fast-forward-time.html"><span>fast</span><wbr><span>Forward</span><wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1339679062%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="fast-forward-time.html">fastForwardTime</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">Seek distance (ms) for each double-tap seek. Read from prefs in <a href="initialize.html">initialize</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="902537965%2FProperties%2F-1280901913" anchor-label="hasShownBrightnessToast" id="902537965%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="has-shown-brightness-toast.html"><span>has</span><wbr><span>Shown</span><wbr><span>Brightness</span><wbr><span><span>Toast</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="902537965%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="has-shown-brightness-toast.html">hasShownBrightnessToast</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="722365174%2FProperties%2F-1280901913" anchor-label="hasShownVolumeToast" id="722365174%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="has-shown-volume-toast.html"><span>has</span><wbr><span>Shown</span><wbr><span>Volume</span><wbr><span><span>Toast</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="722365174%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="has-shown-volume-toast.html">hasShownVolumeToast</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1512095303%2FProperties%2F-1280901913" anchor-label="hasTriggeredSpeedUp" id="1512095303%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="has-triggered-speed-up.html"><span>has</span><wbr><span>Triggered</span><wbr><span>Speed</span><wbr><span><span>Up</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1512095303%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="has-triggered-speed-up.html">hasTriggeredSpeedUp</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1146580447%2FProperties%2F-1280901913" anchor-label="holdHandler" id="-1146580447%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="hold-handler.html"><span>hold</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1146580447%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">val </span><a href="hold-handler.html">holdHandler</a><span class="token operator">: </span><span data-unresolved-link="android.os/Handler///PointingToDeclaration/">Handler</span></div><div class="brief "><p class="paragraph">Hold / speed-up</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1593111918%2FProperties%2F-1280901913" anchor-label="holdRunnable" id="-1593111918%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="hold-runnable.html"><span>hold</span><wbr><span><span>Runnable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1593111918%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">val </span><a href="hold-runnable.html">holdRunnable</a><span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Runnable.html">Runnable</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-313636119%2FProperties%2F-1280901913" anchor-label="isBrightnessLocked" id="-313636119%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-brightness-locked.html"><span>is</span><wbr><span>Brightness</span><wbr><span><span>Locked</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-313636119%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="is-brightness-locked.html">isBrightnessLocked</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1765376384%2FProperties%2F-1280901913" anchor-label="isCurrentTouchValid" id="1765376384%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-current-touch-valid.html"><span>is</span><wbr><span>Current</span><wbr><span>Touch</span><wbr><span><span>Valid</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1765376384%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="is-current-touch-valid.html">isCurrentTouchValid</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Touch tracking</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="587948809%2FProperties%2F-1280901913" anchor-label="isFullScreen" id="587948809%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-full-screen.html"><span>is</span><wbr><span>Full</span><wbr><span><span>Screen</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="587948809%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="is-full-screen.html">isFullScreen</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Set true by the host when the player occupies the full screen. Controls whether hardware volume-key overrides are active (phones/emulators only).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1019955654%2FProperties%2F-1280901913" anchor-label="isLocked" id="-1019955654%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-locked.html"><span>is</span><wbr><span><span>Locked</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1019955654%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="is-locked.html">isLocked</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Mirrors the host's lock state; suppresses gesture interactions when true.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1098928768%2FProperties%2F-1280901913" anchor-label="isVolumeLocked" id="1098928768%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-volume-locked.html"><span>is</span><wbr><span>Volume</span><wbr><span><span>Locked</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1098928768%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="is-volume-locked.html">isVolumeLocked</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-811091835%2FProperties%2F-1280901913" anchor-label="lastPan" id="-811091835%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="last-pan.html"><span>last</span><wbr><span><span>Pan</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-811091835%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="last-pan.html">lastPan</a><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.utils/-vector2/index.html">Vector2</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Midpoint of the two-finger pan, null when no pan is active.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1143176017%2FProperties%2F-1280901913" anchor-label="lastTouchEndTime" id="-1143176017%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="last-touch-end-time.html"><span>last</span><wbr><span>Touch</span><wbr><span>End</span><wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1143176017%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="last-touch-end-time.html">lastTouchEndTime</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">System time of the most-recent touch end.  Updated by callers at the end of every ACTION_UP.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-763729303%2FProperties%2F-1280901913" anchor-label="matrixAnimation" id="-763729303%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="matrix-animation.html"><span>matrix</span><wbr><span><span>Animation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-763729303%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="matrix-animation.html">matrixAnimation</a><span class="token operator">: </span><span data-unresolved-link="android.animation/ValueAnimator///PointingToDeclaration/">ValueAnimator</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Running snap-back animation, or null.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1436739823%2FProperties%2F-1280901913" anchor-label="speedupEnabled" id="1436739823%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="speedup-enabled.html"><span>speedup</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1436739823%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="speedup-enabled.html">speedupEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1904794165%2FProperties%2F-1280901913" anchor-label="swipeHorizontalEnabled" id="-1904794165%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="swipe-horizontal-enabled.html"><span>swipe</span><wbr><span>Horizontal</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1904794165%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="swipe-horizontal-enabled.html">swipeHorizontalEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-181553187%2FProperties%2F-1280901913" anchor-label="swipeVerticalEnabled" id="-181553187%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="swipe-vertical-enabled.html"><span>swipe</span><wbr><span>Vertical</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-181553187%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="swipe-vertical-enabled.html">swipeVerticalEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Gesture settings (read from prefs in initialize)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1623592139%2FProperties%2F-1280901913" anchor-label="uiShowingBeforeGesture" id="-1623592139%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ui-showing-before-gesture.html"><span>ui</span><wbr><span>Showing</span><wbr><span>Before</span><wbr><span><span>Gesture</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1623592139%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="ui-showing-before-gesture.html">uiShowingBeforeGesture</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Whether the player UI was visible when the current swipe gesture began.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2006699337%2FProperties%2F-1280901913" anchor-label="useTrueSystemBrightness" id="-2006699337%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="use-true-system-brightness.html"><span>use</span><wbr><span>True</span><wbr><span>System</span><wbr><span><span>Brightness</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2006699337%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="use-true-system-brightness.html">useTrueSystemBrightness</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">When true, read/write system brightness via <span data-unresolved-link="android.provider/Settings.System/SCREEN_BRIGHTNESS/#/PointingToDeclaration/">Settings.System.SCREEN_BRIGHTNESS</span>. Automatically falls back to window-attribute brightness if the permission is missing.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1888454311%2FProperties%2F-1280901913" anchor-label="videoOutline" id="1888454311%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="video-outline.html"><span>video</span><wbr><span><span>Outline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1888454311%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="video-outline.html">videoOutline</a><span class="token operator">: </span><span data-unresolved-link="android.view/View///PointingToDeclaration/">View</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Optional view for showing the snap-hint outline during zoom (set by FullScreenPlayer).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="146383194%2FProperties%2F-1280901913" anchor-label="zoomMatrix" id="146383194%2FProperties%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="zoom-matrix.html"><span>zoom</span><wbr><span><span>Matrix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="146383194%2FProperties%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">var </span><a href="zoom-matrix.html">zoomMatrix</a><span class="token operator">: </span><span data-unresolved-link="android.graphics/Matrix///PointingToDeclaration/">Matrix</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Current zoom+pan matrix, or null when no zoom is active.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1767213617%2FFunctions%2F-1280901913" anchor-label="animateCenterControls" id="1767213617%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="animate-center-controls.html"><span>animate</span><wbr><span>Center</span><wbr><span><span>Controls</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1767213617%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="animate-center-controls.html"><span class="token function">animateCenterControls</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fadeTo<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Fades playerRewHolder, playerFfwdHolder, and playerPausePlay to <a href="animate-center-controls.html">fadeTo</a> (0f or 1f). Always resets the holder alphas to 1f first so any stale fillAfter state is cleared. Called from host fragments' show/hide control animations so both GeneratorPlayer and trailer share the same fade logic.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1423178865%2FFunctions%2F-1280901913" anchor-label="applyZoomMatrix" id="1423178865%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="apply-zoom-matrix.html"><span>apply</span><wbr><span>Zoom</span><wbr><span><span>Matrix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1423178865%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="apply-zoom-matrix.html"><span class="token function">applyZoomMatrix</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">newMatrix<span class="token operator">: </span><span data-unresolved-link="android.graphics/Matrix///PointingToDeclaration/">Matrix</span><span class="token punctuation">, </span></span><span class="parameter ">animation<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Applies <a href="apply-zoom-matrix.html">newMatrix</a> (scale + translation only) to the video surface view.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1153536061%2FFunctions%2F-1280901913" anchor-label="clearZoomState" id="1153536061%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clear-zoom-state.html"><span>clear</span><wbr><span>Zoom</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1153536061%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="clear-zoom-state.html"><span class="token function">clearZoomState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Clears all zoom state and resets the video surface view to 1:1 scale. Does NOT change the ExoPlayer resize mode - call <a href="../-player-view/resize.html">PlayerView.resize</a> separately.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1731265825%2FFunctions%2F-1280901913" anchor-label="currentZoomMatrix" id="-1731265825%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-zoom-matrix.html"><span>current</span><wbr><span>Zoom</span><wbr><span><span>Matrix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1731265825%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="current-zoom-matrix.html"><span class="token function">currentZoomMatrix</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="android.graphics/Matrix///PointingToDeclaration/">Matrix</span></div><div class="brief "><p class="paragraph">Returns the current zoom matrix, accounting for RESIZE_MODE_ZOOM which already has an implicit zoom applied.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1524946595%2FFunctions%2F-1280901913" anchor-label="fastForward" id="1524946595%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fast-forward.html"><span>fast</span><wbr><span><span>Forward</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1524946595%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="fast-forward.html"><span class="token function">fastForward</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Plays the fast-forward animation and seeks forward by <a href="fast-forward-time.html">fastForwardTime</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1050851547%2FFunctions%2F-1280901913" anchor-label="getBrightness" id="-1050851547%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-brightness.html"><span>get</span><wbr><span><span>Brightness</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1050851547%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-brightness.html"><span class="token function">getBrightness</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Reads from <span data-unresolved-link="android.provider/Settings.System/SCREEN_BRIGHTNESS/#/PointingToDeclaration/">Settings.System.SCREEN_BRIGHTNESS</span>, falling back to the window attribute if the permission is absent.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-60776519%2FFunctions%2F-1280901913" anchor-label="handleBrightnessAdjustment" id="-60776519%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="handle-brightness-adjustment.html"><span>handle</span><wbr><span>Brightness</span><wbr><span><span>Adjustment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-60776519%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="handle-brightness-adjustment.html"><span class="token function">handleBrightnessAdjustment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">verticalAddition<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1299685172%2FFunctions%2F-1280901913" anchor-label="handleVolumeAdjustment" id="1299685172%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="handle-volume-adjustment.html"><span>handle</span><wbr><span>Volume</span><wbr><span><span>Adjustment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1299685172%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="handle-volume-adjustment.html"><span class="token function">handleVolumeAdjustment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">delta<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">fromButton<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1235881043%2FFunctions%2F-1280901913" anchor-label="handleVolumeKey" id="-1235881043%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="handle-volume-key.html"><span>handle</span><wbr><span>Volume</span><wbr><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1235881043%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="handle-volume-key.html"><span class="token function">handleVolumeKey</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">keyCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Handles a hardware volume key press. Only active on phones/emulators when <a href="is-full-screen.html">isFullScreen</a> is true.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="356343683%2FFunctions%2F-1280901913" anchor-label="handleZoomPanGesture" id="356343683%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="handle-zoom-pan-gesture.html"><span>handle</span><wbr><span>Zoom</span><wbr><span>Pan</span><wbr><span><span>Gesture</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="356343683%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="handle-zoom-pan-gesture.html"><span class="token function">handleZoomPanGesture</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><span data-unresolved-link="android.view/MotionEvent///PointingToDeclaration/">MotionEvent</span><span class="token punctuation">, </span></span><span class="parameter ">ctx<span class="token operator">: </span><span data-unresolved-link="android.content/Context///PointingToDeclaration/">Context</span><span class="token punctuation">, </span></span><span class="parameter ">onFirstPointerDown<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">onGestureEnd<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Processes a two-finger zoom/pan gesture event. Handles scale detection, panning, and the snap-back animation after finger lift.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-262739266%2FFunctions%2F-1280901913" anchor-label="initialize" id="-262739266%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="initialize.html"><span><span>initialize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-262739266%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="initialize.html"><span class="token function">initialize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called from <a href="../-player-view/initialize.html">PlayerView.initialize</a> after views are bound.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1523182619%2FFunctions%2F-1280901913" anchor-label="onTapDetected" id="-1523182619%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-tap-detected.html"><span>on</span><wbr><span>Tap</span><wbr><span><span>Detected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1523182619%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-tap-detected.html"><span class="token function">onTapDetected</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">viewWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">isLocked<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">onSingleTap<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Call when a valid tap is detected (short hold, minimal movement, valid touch area). Routes to double-tap seeking/pausing or schedules a delayed single-tap callback.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-654966107%2FFunctions%2F-1280901913" anchor-label="release" id="-654966107%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="release.html"><span><span>release</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-654966107%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="release.html"><span class="token function">release</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Called from <a href="../-player-view/release.html">PlayerView.release</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="359896086%2FFunctions%2F-1280901913" anchor-label="releaseKeyEventListener" id="359896086%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="release-key-event-listener.html"><span>release</span><wbr><span>Key</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="359896086%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="release-key-event-listener.html"><span class="token function">releaseKeyEventListener</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Nulls <a href="../../com.lagradost.cloudstream3/-common-activity/key-event-listener.html">keyEventListener</a>. Called from the host fragment's onPause.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1420315463%2FFunctions%2F-1280901913" anchor-label="releaseOverlayLayoutListener" id="1420315463%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="release-overlay-layout-listener.html"><span>release</span><wbr><span>Overlay</span><wbr><span>Layout</span><wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1420315463%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="release-overlay-layout-listener.html"><span class="token function">releaseOverlayLayoutListener</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Removes the overlay layout listener registered by <a href="request-update-brightness-overlay-on-next-layout.html">requestUpdateBrightnessOverlayOnNextLayout</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1205098645%2FFunctions%2F-1280901913" anchor-label="requestUpdateBrightnessOverlayOnNextLayout" id="-1205098645%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="request-update-brightness-overlay-on-next-layout.html"><span>request</span><wbr><span>Update</span><wbr><span>Brightness</span><wbr><span>Overlay</span><wbr><span>On</span><wbr><span>Next</span><wbr><span><span>Layout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1205098645%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="request-update-brightness-overlay-on-next-layout.html"><span class="token function">requestUpdateBrightnessOverlayOnNextLayout</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Attaches a persistent layout-change listener to the ExoPlayer view so <a href="update-brightness-overlay-bounds.html">updateBrightnessOverlayBounds</a> is called on every layout pass (orientation change, aspect-ratio change, zoom, PiP transition, etc.).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2018381479%2FFunctions%2F-1280901913" anchor-label="resetFastForwardText" id="2018381479%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-fast-forward-text.html"><span>reset</span><wbr><span>Fast</span><wbr><span>Forward</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2018381479%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="reset-fast-forward-text.html"><span class="token function">resetFastForwardText</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Resets the fast-forward button label to the standard "+Xs" format.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1098083957%2FFunctions%2F-1280901913" anchor-label="resetRewindText" id="1098083957%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-rewind-text.html"><span>reset</span><wbr><span>Rewind</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1098083957%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="reset-rewind-text.html"><span class="token function">resetRewindText</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Resets the rewind button label to the standard "–Xs" format.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1681514538%2FFunctions%2F-1280901913" anchor-label="resetZoomToDefault" id="1681514538%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-zoom-to-default.html"><span>reset</span><wbr><span>Zoom</span><wbr><span>To</span><wbr><span><span>Default</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1681514538%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="reset-zoom-to-default.html"><span class="token function">resetZoomToDefault</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Resets zoom to fit mode if any zoom is currently active. Calls <a href="../-player-view/resize.html">PlayerView.resize</a> to update the ExoPlayer resize mode.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-813412237%2FFunctions%2F-1280901913" anchor-label="rewind" id="-813412237%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rewind.html"><span><span>rewind</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-813412237%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="rewind.html"><span class="token function">rewind</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Plays the rewind animation and seeks back by <a href="fast-forward-time.html">fastForwardTime</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1822973610%2FFunctions%2F-1280901913" anchor-label="setBrightness" id="1822973610%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-brightness.html"><span>set</span><wbr><span><span>Brightness</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1822973610%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-brightness.html"><span class="token function">setBrightness</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">brightness<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets <span data-unresolved-link="android.provider/Settings.System/SCREEN_BRIGHTNESS/#/PointingToDeclaration/">Settings.System.SCREEN_BRIGHTNESS</span>, falling back to the window attribute if the permission is absent.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-730417632%2FFunctions%2F-1280901913" anchor-label="setupKeyEventListener" id="-730417632%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="setup-key-event-listener.html"><span>setup</span><wbr><span>Key</span><wbr><span>Event</span><wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-730417632%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="setup-key-event-listener.html"><span class="token function">setupKeyEventListener</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Registers the basic volume-key listener on <a href="../../com.lagradost.cloudstream3/-common-activity/key-event-listener.html">keyEventListener</a>. Called from <a href="../-player-view/initialize.html">PlayerView.initialize</a> and from the host fragment's onResume.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1055871906%2FFunctions%2F-1280901913" anchor-label="setupTouchGestures" id="1055871906%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="setup-touch-gestures.html"><span>setup</span><wbr><span>Touch</span><wbr><span><span>Gestures</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1055871906%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="setup-touch-gestures.html"><span class="token function">setupTouchGestures</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Touch gestures</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-20868975%2FFunctions%2F-1280901913" anchor-label="showOrHideSpeedUp" id="-20868975%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="show-or-hide-speed-up.html"><span>show</span><wbr><span>Or</span><wbr><span>Hide</span><wbr><span>Speed</span><wbr><span><span>Up</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-20868975%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="show-or-hide-speed-up.html"><span class="token function">showOrHideSpeedUp</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">show<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Speed-up</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1877699935%2FFunctions%2F-1280901913" anchor-label="updateBrightnessOverlayBounds" id="-1877699935%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="update-brightness-overlay-bounds.html"><span>update</span><wbr><span>Brightness</span><wbr><span>Overlay</span><wbr><span><span>Bounds</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1877699935%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="update-brightness-overlay-bounds.html"><span class="token function">updateBrightnessOverlayBounds</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Resizes and repositions <a href="brightness-overlay.html">brightnessOverlay</a> to exactly match the visible video surface, accounting for zoom scale and translation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1540571525%2FFunctions%2F-1280901913" anchor-label="verifyVolume" id="-1540571525%2FFunctions%2F-1280901913" data-filterable-set=":app/prereleaseDebug"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/prereleaseDebug" data-filterable-set=":app/prereleaseDebug">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="verify-volume.html"><span>verify</span><wbr><span><span>Volume</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1540571525%2FFunctions%2F-1280901913"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/prereleaseDebug"><div class="symbol monospace"><span class="token keyword">fun </span><a href="verify-volume.html"><span class="token function">verifyVolume</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Syncs <a href="current-requested-volume.html">currentRequestedVolume</a> with the current system stream volume.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
