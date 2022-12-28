@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SimklSyncStatus</title>
+    <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../../index.html">
+                            Cloudstream
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":app:dokkaHtml/stableRelease">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="Cloudstream::com.lagradost.cloudstream3.syncproviders.providers/SimklApi.SimklSyncStatus///PointingToDeclaration//101969414">
+  <div class="breadcrumbs"><a href="../../../../index.html">Cloudstream</a><span class="delimiter">/</span><a href="../../index.html">com.lagradost.cloudstream3.syncproviders.providers</a><span class="delimiter">/</span><a href="../index.html">SimklApi</a><span class="delimiter">/</span><span class="current">SimklSyncStatus</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Simkl</span><wbr></wbr><span>Sync</span><wbr></wbr><span><span>Status</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">SimklSyncStatus</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>status<span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.ui/-sync-watch-type/index.html">SyncWatchType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>score<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>oldScore<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>watchedEpisodes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>episodeConstructor<span class="token operator">: </span><a href="../-simkl-episode-constructor/index.html">SimklApi.SimklEpisodeConstructor</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>isFavorite<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>maxEpisodes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>oldEpisodes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>oldStatus<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="../../../com.lagradost.cloudstream3.syncproviders/-sync-a-p-i/-abstract-sync-status/index.html">SyncAPI.AbstractSyncStatus</a></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1622590801%2FConstructors%2F101969414" anchor-label="SimklSyncStatus" id="-1622590801%2FConstructors%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-simkl-sync-status.html"><span>Simkl</span><wbr></wbr><span>Sync</span><wbr></wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1622590801%2FConstructors%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">status<span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.ui/-sync-watch-type/index.html">SyncWatchType</a><span class="token punctuation">, </span></span><span class="parameter ">score<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">oldScore<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">watchedEpisodes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">episodeConstructor<span class="token operator">: </span><a href="../-simkl-episode-constructor/index.html">SimklApi.SimklEpisodeConstructor</a><span class="token punctuation">, </span></span><span class="parameter ">isFavorite<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">maxEpisodes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">oldEpisodes<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">oldStatus<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-679483074%2FProperties%2F101969414" anchor-label="episodeConstructor" id="-679483074%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="episode-constructor.html"><span>episode</span><wbr></wbr><span><span>Constructor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-679483074%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="episode-constructor.html">episodeConstructor</a><span class="token operator">: </span><a href="../-simkl-episode-constructor/index.html">SimklApi.SimklEpisodeConstructor</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1904606921%2FProperties%2F101969414" anchor-label="isFavorite" id="-1904606921%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-favorite.html"><span>is</span><wbr></wbr><span><span>Favorite</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1904606921%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="is-favorite.html">isFavorite</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1654534079%2FProperties%2F101969414" anchor-label="maxEpisodes" id="-1654534079%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="max-episodes.html"><span>max</span><wbr></wbr><span><span>Episodes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1654534079%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="max-episodes.html">maxEpisodes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="716516318%2FProperties%2F101969414" anchor-label="oldEpisodes" id="716516318%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="old-episodes.html"><span>old</span><wbr></wbr><span><span>Episodes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="716516318%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="old-episodes.html">oldEpisodes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Save seen episodes separately to know the change from old to new. Required to remove seen episodes if count decreases</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1253682926%2FProperties%2F101969414" anchor-label="oldScore" id="-1253682926%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="old-score.html"><span>old</span><wbr></wbr><span><span>Score</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1253682926%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="old-score.html">oldScore</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1867843260%2FProperties%2F101969414" anchor-label="oldStatus" id="-1867843260%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="old-status.html"><span>old</span><wbr></wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1867843260%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="old-status.html">oldStatus</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1652741685%2FProperties%2F101969414" anchor-label="score" id="-1652741685%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="score.html"><span><span>score</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1652741685%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="score.html">score</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">1-10</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1353762901%2FProperties%2F101969414" anchor-label="status" id="-1353762901%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="status.html"><span><span>status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1353762901%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="status.html">status</a><span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.ui/-sync-watch-type/index.html">SyncWatchType</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="376085815%2FProperties%2F101969414" anchor-label="watchedEpisodes" id="376085815%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="watched-episodes.html"><span>watched</span><wbr></wbr><span><span>Episodes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="376085815%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="watched-episodes.html">watchedEpisodes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
