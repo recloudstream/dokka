@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>FullScreenPlayer</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            Cloudstream
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":docs:dokkaHtml/cloudstream">cloudstream</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="Cloudstream::com.lagradost.cloudstream3.ui.player/FullScreenPlayer///PointingToDeclaration//1933467962">
+  <div class="breadcrumbs"><a href="../../../index.html">Cloudstream</a><span class="delimiter">/</span><a href="../index.html">com.lagradost.cloudstream3.ui.player</a><span class="delimiter">/</span><span class="current">FullScreenPlayer</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Full</span><wbr></wbr><span>Screen</span><wbr></wbr><span><span>Player</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">FullScreenPlayer</a> : <a href="../-abstract-player-fragment/index.html">AbstractPlayerFragment</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/recloudstream/cloudstream/tree/master/app/src/main/java/com/lagradost/cloudstream3/ui/player/FullScreenPlayer.kt#L92">source</a>)</span></span></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-generator-player/index.html">GeneratorPlayer</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../com.lagradost.cloudstream3.ui.result/-result-fragment-phone/index.html">ResultFragmentPhone</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="922816356%2FConstructors%2F1933467962" anchor-label="FullScreenPlayer" id="922816356%2FConstructors%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-full-screen-player.html"><span>Full</span><wbr></wbr><span>Screen</span><wbr></wbr><span><span>Player</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="922816356%2FConstructors%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="220912513%2FClasslikes%2F1933467962" anchor-label="Companion" id="220912513%2FClasslikes%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="220912513%2FClasslikes%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1152904536%2FClasslikes%2F1933467962" anchor-label="TouchAction" id="1152904536%2FClasslikes%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-touch-action/index.html"><span>Touch</span><wbr></wbr><span><span>Action</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1152904536%2FClasslikes%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-touch-action/index.html">TouchAction</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-touch-action/index.html">FullScreenPlayer.TouchAction</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1695041333%2FProperties%2F1933467962" anchor-label="isBuffering" id="-1695041333%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/is-buffering.html"><span>is</span><wbr></wbr><span><span>Buffering</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1695041333%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-abstract-player-fragment/is-buffering.html">isBuffering</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1110948138%2FProperties%2F1933467962" anchor-label="piphide" id="1110948138%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/piphide.html"><span><span>piphide</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1110948138%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-abstract-player-fragment/piphide.html">piphide</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/widget/FrameLayout.html">FrameLayout</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="459387030%2FProperties%2F1933467962" anchor-label="player" id="459387030%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/player.html"><span><span>player</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="459387030%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-abstract-player-fragment/player.html">player</a><span class="token operator">: </span><a href="../-i-player/index.html">IPlayer</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-208415294%2FProperties%2F1933467962" anchor-label="playerBuffering" id="-208415294%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/player-buffering.html"><span>player</span><wbr></wbr><span><span>Buffering</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-208415294%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-abstract-player-fragment/player-buffering.html">playerBuffering</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/widget/ProgressBar.html">ProgressBar</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="253527066%2FProperties%2F1933467962" anchor-label="playerPausePlay" id="253527066%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/player-pause-play.html"><span>player</span><wbr></wbr><span>Pause</span><wbr></wbr><span><span>Play</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="253527066%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-abstract-player-fragment/player-pause-play.html">playerPausePlay</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/widget/ImageView.html">ImageView</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="770347266%2FProperties%2F1933467962" anchor-label="playerPausePlayHolderHolder" id="770347266%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/player-pause-play-holder-holder.html"><span>player</span><wbr></wbr><span>Pause</span><wbr></wbr><span>Play</span><wbr></wbr><span>Holder</span><wbr></wbr><span><span>Holder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="770347266%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-abstract-player-fragment/player-pause-play-holder-holder.html">playerPausePlayHolderHolder</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/widget/FrameLayout.html">FrameLayout</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="453092593%2FProperties%2F1933467962" anchor-label="playerView" id="453092593%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/player-view.html"><span>player</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="453092593%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-abstract-player-fragment/player-view.html">playerView</a><span class="token operator">: </span><span data-unresolved-link="/&amp;lt;Error class: unknown class&amp;gt;///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="399372992%2FProperties%2F1933467962" anchor-label="resizeMode" id="399372992%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/resize-mode.html"><span>resize</span><wbr></wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="399372992%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-abstract-player-fragment/resize-mode.html">resizeMode</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="166269862%2FProperties%2F1933467962" anchor-label="subStyle" id="166269862%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/sub-style.html"><span>sub</span><wbr></wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="166269862%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-abstract-player-fragment/sub-style.html">subStyle</a><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.ui.subtitles/-save-caption-style/index.html">SaveCaptionStyle</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1829869299%2FProperties%2F1933467962" anchor-label="subtitleHolder" id="1829869299%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/subtitle-holder.html"><span>subtitle</span><wbr></wbr><span><span>Holder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1829869299%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-abstract-player-fragment/subtitle-holder.html">subtitleHolder</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/widget/FrameLayout.html">FrameLayout</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1060851966%2FProperties%2F1933467962" anchor-label="subView" id="1060851966%2FProperties%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/sub-view.html"><span>sub</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1060851966%2FProperties%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../-abstract-player-fragment/sub-view.html">subView</a><span class="token operator">: </span><span data-unresolved-link="/&amp;lt;Error class: unknown class&amp;gt;///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1162355214%2FFunctions%2F1933467962" anchor-label="embeddedSubtitlesFetched" id="-1162355214%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/embedded-subtitles-fetched.html"><span>embedded</span><wbr></wbr><span>Subtitles</span><wbr></wbr><span><span>Fetched</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1162355214%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/embedded-subtitles-fetched.html"><span class="token function">embeddedSubtitlesFetched</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">subtitles<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-subtitle-data/index.html">SubtitleData</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1548597117%2FFunctions%2F1933467962" anchor-label="exitedPipMode" id="1548597117%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="exited-pip-mode.html"><span>exited</span><wbr></wbr><span>Pip</span><wbr></wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1548597117%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="exited-pip-mode.html"><span class="token function">exitedPipMode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-509726569%2FFunctions%2F1933467962" anchor-label="hasNextMirror" id="-509726569%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/has-next-mirror.html"><span>has</span><wbr></wbr><span>Next</span><wbr></wbr><span><span>Mirror</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-509726569%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/has-next-mirror.html"><span class="token function">hasNextMirror</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1249275238%2FFunctions%2F1933467962" anchor-label="lockOrientation" id="-1249275238%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="lock-orientation.html"><span>lock</span><wbr></wbr><span><span>Orientation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1249275238%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="lock-orientation.html"><span class="token function">lockOrientation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1918818805%2FFunctions%2F1933467962" anchor-label="mainCallback" id="1918818805%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/main-callback.html"><span>main</span><wbr></wbr><span><span>Callback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1918818805%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/main-callback.html"><span class="token function">mainCallback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="../-player-event/index.html">PlayerEvent</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This receives the events from the player, if you want to append functionality you do it here, do note that this only receives events for UI changes, and returning early WONT stop it from changing in eg the player time or pause status</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2048917723%2FFunctions%2F1933467962" anchor-label="nextEpisode" id="2048917723%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/next-episode.html"><span>next</span><wbr></wbr><span><span>Episode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2048917723%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/next-episode.html"><span class="token function">nextEpisode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2063591173%2FFunctions%2F1933467962" anchor-label="nextMirror" id="2063591173%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/next-mirror.html"><span>next</span><wbr></wbr><span><span>Mirror</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2063591173%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/next-mirror.html"><span class="token function">nextMirror</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-247315536%2FFunctions%2F1933467962" anchor-label="nextResize" id="-247315536%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/next-resize.html"><span>next</span><wbr></wbr><span><span>Resize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-247315536%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/next-resize.html"><span class="token function">nextResize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-436218570%2FFunctions%2F1933467962" anchor-label="onCreateView" id="-436218570%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-create-view.html"><span>on</span><wbr></wbr><span>Create</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-436218570%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-create-view.html"><span class="token function">onCreateView</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">inflater<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/view/LayoutInflater.html">LayoutInflater</a><span class="token punctuation">, </span></span><span class="parameter ">container<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/view/ViewGroup.html">ViewGroup</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">savedInstanceState<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Bundle.html">Bundle</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2121839233%2FFunctions%2F1933467962" anchor-label="onDestroy" id="-2121839233%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-destroy.html"><span>on</span><wbr></wbr><span><span>Destroy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2121839233%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-destroy.html"><span class="token function">onDestroy</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1983077030%2FFunctions%2F1933467962" anchor-label="onDestroyView" id="-1983077030%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-destroy-view.html"><span>on</span><wbr></wbr><span>Destroy</span><wbr></wbr><span><span>View</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1983077030%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="on-destroy-view.html"><span class="token function">onDestroyView</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1346368429%2FFunctions%2F1933467962" anchor-label="onDownload" id="-1346368429%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/on-download.html"><span>on</span><wbr></wbr><span><span>Download</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1346368429%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/on-download.html"><span class="token function">onDownload</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">event<span class="token operator">: </span><a href="../-download-event/index.html">DownloadEvent</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="526797201%2FFunctions%2F1933467962" anchor-label="onPictureInPictureModeChanged" id="526797201%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/on-picture-in-picture-mode-changed.html"><span>on</span><wbr></wbr><span>Picture</span><wbr></wbr><span>In</span><wbr></wbr><span>Picture</span><wbr></wbr><span>Mode</span><wbr></wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="526797201%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/on-picture-in-picture-mode-changed.html"><span class="token function">onPictureInPictureModeChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">isInPictureInPictureMode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2110800844%2FFunctions%2F1933467962" anchor-label="onResume" id="-2110800844%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-resume.html"><span>on</span><wbr></wbr><span><span>Resume</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2110800844%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-resume.html"><span class="token function">onResume</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1088496165%2FFunctions%2F1933467962" anchor-label="onSaveInstanceState" id="-1088496165%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-save-instance-state.html"><span>on</span><wbr></wbr><span>Save</span><wbr></wbr><span>Instance</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1088496165%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="on-save-instance-state.html"><span class="token function">onSaveInstanceState</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">outState<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Bundle.html">Bundle</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1255578870%2FFunctions%2F1933467962" anchor-label="onStop" id="1255578870%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/on-stop.html"><span>on</span><wbr></wbr><span><span>Stop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1255578870%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/on-stop.html"><span class="token function">onStop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2103916120%2FFunctions%2F1933467962" anchor-label="onTimestamp" id="-2103916120%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/on-timestamp.html"><span>on</span><wbr></wbr><span><span>Timestamp</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2103916120%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/on-timestamp.html"><span class="token function">onTimestamp</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">timestamp<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.utils/-episode-skip/-skip-stamp/index.html">EpisodeSkip.SkipStamp</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2027597837%2FFunctions%2F1933467962" anchor-label="onTimestampSkipped" id="2027597837%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/on-timestamp-skipped.html"><span>on</span><wbr></wbr><span>Timestamp</span><wbr></wbr><span><span>Skipped</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2027597837%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/on-timestamp-skipped.html"><span class="token function">onTimestampSkipped</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">timestamp<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.utils/-episode-skip/-skip-stamp/index.html">EpisodeSkip.SkipStamp</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1581170204%2FFunctions%2F1933467962" anchor-label="onTracksInfoChanged" id="-1581170204%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/on-tracks-info-changed.html"><span>on</span><wbr></wbr><span>Tracks</span><wbr></wbr><span>Info</span><wbr></wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1581170204%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/on-tracks-info-changed.html"><span class="token function">onTracksInfoChanged</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-242778672%2FFunctions%2F1933467962" anchor-label="onViewCreated" id="-242778672%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-view-created.html"><span>on</span><wbr></wbr><span>View</span><wbr></wbr><span><span>Created</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-242778672%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-view-created.html"><span class="token function">onViewCreated</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/view/View.html">View</a><span class="token punctuation">, </span></span><span class="parameter ">savedInstanceState<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Bundle.html">Bundle</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1556602642%2FFunctions%2F1933467962" anchor-label="openOnlineSubPicker" id="1556602642%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="open-online-sub-picker.html"><span>open</span><wbr></wbr><span>Online</span><wbr></wbr><span>Sub</span><wbr></wbr><span><span>Picker</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1556602642%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="open-online-sub-picker.html"><span class="token function">openOnlineSubPicker</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">loadResponse<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3/-load-response/index.html">LoadResponse</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dismissCallback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1705866606%2FFunctions%2F1933467962" anchor-label="playerDimensionsLoaded" id="-1705866606%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="player-dimensions-loaded.html"><span>player</span><wbr></wbr><span>Dimensions</span><wbr></wbr><span><span>Loaded</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1705866606%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="player-dimensions-loaded.html"><span class="token function">playerDimensionsLoaded</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">width<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">height<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1260607031%2FFunctions%2F1933467962" anchor-label="playerError" id="-1260607031%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/player-error.html"><span>player</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1260607031%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/player-error.html"><span class="token function">playerError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">exception<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1636327942%2FFunctions%2F1933467962" anchor-label="playerPositionChanged" id="-1636327942%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/player-position-changed.html"><span>player</span><wbr></wbr><span>Position</span><wbr></wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1636327942%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/player-position-changed.html"><span class="token function">playerPositionChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">position<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">duration<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1539408921%2FFunctions%2F1933467962" anchor-label="playerStatusChanged" id="1539408921%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="player-status-changed.html"><span>player</span><wbr></wbr><span>Status</span><wbr></wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1539408921%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="player-status-changed.html"><span class="token function">playerStatusChanged</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="234100763%2FFunctions%2F1933467962" anchor-label="prevEpisode" id="234100763%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/prev-episode.html"><span>prev</span><wbr></wbr><span><span>Episode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="234100763%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/prev-episode.html"><span class="token function">prevEpisode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1352300729%2FFunctions%2F1933467962" anchor-label="resetFastForwardText" id="1352300729%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-fast-forward-text.html"><span>reset</span><wbr></wbr><span>Fast</span><wbr></wbr><span>Forward</span><wbr></wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1352300729%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="reset-fast-forward-text.html"><span class="token function">resetFastForwardText</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1234010403%2FFunctions%2F1933467962" anchor-label="resetRewindText" id="1234010403%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reset-rewind-text.html"><span>reset</span><wbr></wbr><span>Rewind</span><wbr></wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1234010403%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="reset-rewind-text.html"><span class="token function">resetRewindText</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="293289734%2FFunctions%2F1933467962" anchor-label="resize" id="293289734%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-player-fragment/resize.html"><span><span>resize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="293289734%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/resize.html"><span class="token function">resize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resize<span class="token operator">: </span><a href="../-player-resize/index.html">PlayerResize</a><span class="token punctuation">, </span></span><span class="parameter ">showToast<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-abstract-player-fragment/resize.html"><span class="token function">resize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resize<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">showToast<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="687722251%2FFunctions%2F1933467962" anchor-label="showMirrorsDialogue" id="687722251%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="show-mirrors-dialogue.html"><span>show</span><wbr></wbr><span>Mirrors</span><wbr></wbr><span><span>Dialogue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="687722251%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="show-mirrors-dialogue.html"><span class="token function">showMirrorsDialogue</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1832854947%2FFunctions%2F1933467962" anchor-label="showTracksDialogue" id="1832854947%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="show-tracks-dialogue.html"><span>show</span><wbr></wbr><span>Tracks</span><wbr></wbr><span><span>Dialogue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1832854947%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="show-tracks-dialogue.html"><span class="token function">showTracksDialogue</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="533775847%2FFunctions%2F1933467962" anchor-label="subtitlesChanged" id="533775847%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="subtitles-changed.html"><span>subtitles</span><wbr></wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="533775847%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="subtitles-changed.html"><span class="token function">subtitlesChanged</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="200221873%2FFunctions%2F1933467962" anchor-label="updateUIVisibility" id="200221873%2FFunctions%2F1933467962" data-filterable-set=":docs:dokkaHtml/cloudstream"></a>
+          <div class="table-row" data-filterable-current=":docs:dokkaHtml/cloudstream" data-filterable-set=":docs:dokkaHtml/cloudstream">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="update-u-i-visibility.html"><span>update</span><wbr></wbr><span><span>UIVisibility</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="200221873%2FFunctions%2F1933467962"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":docs:dokkaHtml/cloudstream"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="update-u-i-visibility.html"><span class="token function">updateUIVisibility</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
