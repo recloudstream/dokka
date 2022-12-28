@@ -1,0 +1,450 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>UpdatedDefaultExtractorsFactory</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    Cloudstream
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":app/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":app/main" data-filter=":app/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    Cloudstream
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="App::com.lagradost.cloudstream3.ui.player/UpdatedDefaultExtractorsFactory///PointingToDeclaration//-1319486001">
+  <div class="breadcrumbs"><a href="../../index.html">App</a><span class="delimiter">/</span><a href="../index.html">com.lagradost.cloudstream3.ui.player</a><span class="delimiter">/</span><span class="current">UpdatedDefaultExtractorsFactory</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Updated</span><wbr><span>Default</span><wbr><span>Extractors</span><wbr><span><span>Factory</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/common/util/UnstableApi.html"><span class="token annotation builtin">UnstableApi</span></a></div></div><span class="token keyword">class </span><a href="index.html">UpdatedDefaultExtractorsFactory</a> : <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ExtractorsFactory.html">ExtractorsFactory</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/recloudstream/cloudstream/tree/master/app/src/main/java/com/lagradost/cloudstream3/ui/player/UpdatedDefaultExtractorsFactory.kt#L88">source</a>)</span></span></div><p class="paragraph">An <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ExtractorsFactory.html">ExtractorsFactory</a> that provides an array of extractors for the following formats:</p><ul><li><p class="paragraph">MP4, including M4A (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/mp4/Mp4Extractor.html">Mp4Extractor</a>)</p></li><li><p class="paragraph">fMP4 (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/mp4/FragmentedMp4Extractor.html">FragmentedMp4Extractor</a>)</p></li><li><p class="paragraph">Matroska and WebM (<a href="../../androidx.media3.extractor.mkv/-updated-matroska-extractor/index.html">UpdatedMatroskaExtractor</a>)</p></li><li><p class="paragraph">Ogg Vorbis/FLAC (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ogg/OggExtractor.html">OggExtractor</a></p></li><li><p class="paragraph">MP3 (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/mp3/Mp3Extractor.html">Mp3Extractor</a>)</p></li><li><p class="paragraph">AAC (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/AdtsExtractor.html">AdtsExtractor</a>)</p></li><li><p class="paragraph">MPEG TS (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/TsExtractor.html">TsExtractor</a>)</p></li><li><p class="paragraph">MPEG PS (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/PsExtractor.html">PsExtractor</a>)</p></li><li><p class="paragraph">FLV (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/flv/FlvExtractor.html">FlvExtractor</a>)</p></li><li><p class="paragraph">WAV (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/wav/WavExtractor.html">WavExtractor</a>)</p></li><li><p class="paragraph">AC3 (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/Ac3Extractor.html">Ac3Extractor</a>)</p></li><li><p class="paragraph">AC4 (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/Ac4Extractor.html">Ac4Extractor</a>)</p></li><li><p class="paragraph">AMR (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/amr/AmrExtractor.html">AmrExtractor</a>)</p></li><li><p class="paragraph">FLAC</p></li><li><p class="paragraph">If available, the FLAC extension's <code class="lang-kotlin">androidx.media3.decoder.flac.FlacExtractor</code> is used.</p></li><li><p class="paragraph">Otherwise, the core <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/flac/FlacExtractor.html">FlacExtractor</a> is used. Note that Android devices do not generally include a FLAC decoder before API 27. This can be worked around by using the FLAC extension or the FFmpeg extension.</p></li><li><p class="paragraph">JPEG (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/jpeg/JpegExtractor.html">JpegExtractor</a>)</p></li><li><p class="paragraph">PNG (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/png/PngExtractor.html">PngExtractor</a>)</p></li><li><p class="paragraph">WEBP (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/webp/WebpExtractor.html">WebpExtractor</a>)</p></li><li><p class="paragraph">BMP (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/bmp/BmpExtractor.html">BmpExtractor</a>)</p></li><li><p class="paragraph">HEIF (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/heif/HeifExtractor.html">HeifExtractor</a>)</p></li><li><p class="paragraph">AVIF (<a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/avif/AvifExtractor.html">AvifExtractor</a>)</p></li><li><p class="paragraph">MIDI, if available, the MIDI extension's <code class="lang-kotlin">androidx.media3.decoder.midi.MidiExtractor</code> is used.</p></li></ul></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-851841864%2FConstructors%2F-1319486001" anchor-label="UpdatedDefaultExtractorsFactory" id="-851841864%2FConstructors%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-updated-default-extractors-factory.html"><span>Updated</span><wbr><span>Default</span><wbr><span>Extractors</span><wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-851841864%2FConstructors%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="836882196%2FClasslikes%2F-1319486001" anchor-label="Companion" id="836882196%2FClasslikes%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="836882196%2FClasslikes%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="518869053%2FFunctions%2F-1319486001" anchor-label="createExtractors" id="518869053%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-extractors.html"><span>create</span><wbr><span><span>Extractors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="518869053%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="create-extractors.html"><span class="token function">createExtractors</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/Extractor.html">Extractor</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="create-extractors.html"><span class="token function">createExtractors</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">uri<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/net/Uri.html">Uri</a><span class="token punctuation">, </span></span><span class="parameter ">responseHeaders<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/Extractor.html">Extractor</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1050923611%2FFunctions%2F-1319486001" anchor-label="experimentalSetCodecsToParseWithinGopSampleDependencies" id="-1050923611%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1050923611%2FFunctions%2F-1319486001"><span>experimental</span><wbr><span>Set</span><wbr><span>Codecs</span><wbr><span>To</span><wbr><span>Parse</span><wbr><span>Within</span><wbr><span>Gop</span><wbr><span>Sample</span><wbr><span><span>Dependencies</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1050923611%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-1050923611%2FFunctions%2F-1319486001"><span class="token function">experimentalSetCodecsToParseWithinGopSampleDependencies</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">codecsToParseWithinGopSampleDependencies<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ExtractorsFactory.html">ExtractorsFactory</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1231956993%2FFunctions%2F-1319486001" anchor-label="experimentalSetTextTrackTranscodingEnabled" id="-1231956993%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="experimental-set-text-track-transcoding-enabled.html"><span>experimental</span><wbr><span>Set</span><wbr><span>Text</span><wbr><span>Track</span><wbr><span>Transcoding</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1231956993%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="experimental-set-text-track-transcoding-enabled.html"><span class="token function"><strike>experimentalSetTextTrackTranscodingEnabled</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textTrackTranscodingEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1036090236%2FFunctions%2F-1319486001" anchor-label="setAdtsExtractorFlags" id="-1036090236%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-adts-extractor-flags.html"><span>set</span><wbr><span>Adts</span><wbr><span>Extractor</span><wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1036090236%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-adts-extractor-flags.html"><span class="token function">setAdtsExtractorFlags</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flags<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/AdtsExtractor.Flags.html"><span class="token annotation builtin">AdtsExtractor.Flags</span></a>&nbsp;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets flags for <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/AdtsExtractor.html">AdtsExtractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-784894524%2FFunctions%2F-1319486001" anchor-label="setAmrExtractorFlags" id="-784894524%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-amr-extractor-flags.html"><span>set</span><wbr><span>Amr</span><wbr><span>Extractor</span><wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-784894524%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-amr-extractor-flags.html"><span class="token function">setAmrExtractorFlags</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flags<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/amr/AmrExtractor.Flags.html"><span class="token annotation builtin">AmrExtractor.Flags</span></a>&nbsp;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets flags for <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/amr/AmrExtractor.html">AmrExtractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-945333149%2FFunctions%2F-1319486001" anchor-label="setConstantBitrateSeekingAlwaysEnabled" id="-945333149%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-constant-bitrate-seeking-always-enabled.html"><span>set</span><wbr><span>Constant</span><wbr><span>Bitrate</span><wbr><span>Seeking</span><wbr><span>Always</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-945333149%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-constant-bitrate-seeking-always-enabled.html"><span class="token function">setConstantBitrateSeekingAlwaysEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">constantBitrateSeekingAlwaysEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Convenience method to set whether approximate seeking using constant bitrate assumptions should be enabled for all extractors that support it, and if it should be enabled even if the content length (and hence the duration of the media) is unknown. If set to true, the flags required to enable this functionality will be OR'd with those passed to the setters when creating extractor instances. If set to false then the flags passed to the setters will be used without modification.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-6165836%2FFunctions%2F-1319486001" anchor-label="setConstantBitrateSeekingEnabled" id="-6165836%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-constant-bitrate-seeking-enabled.html"><span>set</span><wbr><span>Constant</span><wbr><span>Bitrate</span><wbr><span>Seeking</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-6165836%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-constant-bitrate-seeking-enabled.html"><span class="token function">setConstantBitrateSeekingEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">constantBitrateSeekingEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Convenience method to set whether approximate seeking using constant bitrate assumptions should be enabled for all extractors that support it. If set to true, the flags required to enable this functionality will be OR'd with those passed to the setters when creating extractor instances. If set to false then the flags passed to the setters will be used without modification.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-717539394%2FFunctions%2F-1319486001" anchor-label="setFlacExtractorFlags" id="-717539394%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-flac-extractor-flags.html"><span>set</span><wbr><span>Flac</span><wbr><span>Extractor</span><wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-717539394%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-flac-extractor-flags.html"><span class="token function">setFlacExtractorFlags</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flags<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/flac/FlacExtractor.Flags.html"><span class="token annotation builtin">FlacExtractor.Flags</span></a>&nbsp;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets flags for <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/flac/FlacExtractor.html">FlacExtractor</a> instances created by the factory. The flags are also used by <code class="lang-kotlin">androidx.media3.decoder.flac.FlacExtractor</code> instances if the FLAC extension is being used.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-731861240%2FFunctions%2F-1319486001" anchor-label="setFragmentedMp4ExtractorFlags" id="-731861240%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-fragmented-mp4-extractor-flags.html"><span>set</span><wbr><span>Fragmented</span><wbr><span>Mp4Extractor</span><wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-731861240%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-fragmented-mp4-extractor-flags.html"><span class="token function">setFragmentedMp4ExtractorFlags</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flags<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/mp4/FragmentedMp4Extractor.Flags.html"><span class="token annotation builtin">FragmentedMp4Extractor.Flags</span></a>&nbsp;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets flags for <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/mp4/FragmentedMp4Extractor.html">FragmentedMp4Extractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1772390722%2FFunctions%2F-1319486001" anchor-label="setJpegExtractorFlags" id="-1772390722%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-jpeg-extractor-flags.html"><span>set</span><wbr><span>Jpeg</span><wbr><span>Extractor</span><wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1772390722%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-jpeg-extractor-flags.html"><span class="token function">setJpegExtractorFlags</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flags<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/jpeg/JpegExtractor.Flags.html"><span class="token annotation builtin">JpegExtractor.Flags</span></a>&nbsp;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets flags for <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/jpeg/JpegExtractor.html">JpegExtractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1584378970%2FFunctions%2F-1319486001" anchor-label="setMatroskaExtractorFlags" id="1584378970%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-matroska-extractor-flags.html"><span>set</span><wbr><span>Matroska</span><wbr><span>Extractor</span><wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1584378970%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-matroska-extractor-flags.html"><span class="token function">setMatroskaExtractorFlags</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flags<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="../../androidx.media3.extractor.mkv/-updated-matroska-extractor/-flags/index.html"><span class="token annotation builtin">UpdatedMatroskaExtractor.Flags</span></a>&nbsp;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets flags for <a href="../../androidx.media3.extractor.mkv/-updated-matroska-extractor/index.html">UpdatedMatroskaExtractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1228941786%2FFunctions%2F-1319486001" anchor-label="setMp3ExtractorFlags" id="1228941786%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-mp3-extractor-flags.html"><span>set</span><wbr><span>Mp3Extractor</span><wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1228941786%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-mp3-extractor-flags.html"><span class="token function">setMp3ExtractorFlags</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flags<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/mp3/Mp3Extractor.Flags.html"><span class="token annotation builtin">Mp3Extractor.Flags</span></a>&nbsp;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets flags for <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/mp3/Mp3Extractor.html">Mp3Extractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="988401657%2FFunctions%2F-1319486001" anchor-label="setMp4ExtractorFlags" id="988401657%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-mp4-extractor-flags.html"><span>set</span><wbr><span>Mp4Extractor</span><wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="988401657%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-mp4-extractor-flags.html"><span class="token function">setMp4ExtractorFlags</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flags<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/mp4/Mp4Extractor.Flags.html"><span class="token annotation builtin">Mp4Extractor.Flags</span></a>&nbsp;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets flags for <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/mp4/Mp4Extractor.html">Mp4Extractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1350192106%2FFunctions%2F-1319486001" anchor-label="setSubtitleParserFactory" id="-1350192106%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-subtitle-parser-factory.html"><span>set</span><wbr><span>Subtitle</span><wbr><span>Parser</span><wbr><span><span>Factory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1350192106%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="set-subtitle-parser-factory.html"><span class="token function">setSubtitleParserFactory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">subtitleParserFactory<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/text/SubtitleParser.Factory.html">SubtitleParser.Factory</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-977799161%2FFunctions%2F-1319486001" anchor-label="setTextTrackTranscodingEnabled" id="-977799161%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-text-track-transcoding-enabled.html"><span>set</span><wbr><span>Text</span><wbr><span>Track</span><wbr><span>Transcoding</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-977799161%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-text-track-transcoding-enabled.html"><span class="token function"><strike>setTextTrackTranscodingEnabled</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">textTrackTranscodingEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="587288839%2FFunctions%2F-1319486001" anchor-label="setTsExtractorFlags" id="587288839%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-ts-extractor-flags.html"><span>set</span><wbr><span>Ts</span><wbr><span>Extractor</span><wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="587288839%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-ts-extractor-flags.html"><span class="token function">setTsExtractorFlags</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flags<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/DefaultTsPayloadReaderFactory.Flags.html"><span class="token annotation builtin">DefaultTsPayloadReaderFactory.Flags</span></a>&nbsp;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets flags for <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/DefaultTsPayloadReaderFactory.html">DefaultTsPayloadReaderFactory</a>s used by <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/TsExtractor.html">TsExtractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-288445851%2FFunctions%2F-1319486001" anchor-label="setTsExtractorMode" id="-288445851%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-ts-extractor-mode.html"><span>set</span><wbr><span>Ts</span><wbr><span>Extractor</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-288445851%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-ts-extractor-mode.html"><span class="token function">setTsExtractorMode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mode<span class="token operator">: </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/TsExtractor.Mode.html"><span class="token annotation builtin">TsExtractor.Mode</span></a>&nbsp;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets the mode for <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/TsExtractor.html">TsExtractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1964657381%2FFunctions%2F-1319486001" anchor-label="setTsExtractorTimestampSearchBytes" id="-1964657381%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-ts-extractor-timestamp-search-bytes.html"><span>set</span><wbr><span>Ts</span><wbr><span>Extractor</span><wbr><span>Timestamp</span><wbr><span>Search</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1964657381%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-ts-extractor-timestamp-search-bytes.html"><span class="token function">setTsExtractorTimestampSearchBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">timestampSearchBytes<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets the number of bytes searched to find a timestamp for <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/TsExtractor.html">TsExtractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="348028909%2FFunctions%2F-1319486001" anchor-label="setTsSubtitleFormats" id="348028909%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-ts-subtitle-formats.html"><span>set</span><wbr><span>Ts</span><wbr><span>Subtitle</span><wbr><span><span>Formats</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="348028909%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-synchronized/index.html"><span class="token annotation builtin">Synchronized</span></a></div></div><span class="token keyword">fun </span><a href="set-ts-subtitle-formats.html"><span class="token function">setTsSubtitleFormats</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">subtitleFormats<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/common/Format.html">Format</a><span class="token operator">&gt;</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">UpdatedDefaultExtractorsFactory</a></div><div class="brief "><p class="paragraph">Sets a list of subtitle formats to pass to the <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/DefaultTsPayloadReaderFactory.html">DefaultTsPayloadReaderFactory</a> used by <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/ts/TsExtractor.html">TsExtractor</a> instances created by the factory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
