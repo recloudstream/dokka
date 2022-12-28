@@ -1,0 +1,375 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PeaceMakerst</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Cloudstream
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":library/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":library/commonMain" data-filter=":library/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Cloudstream
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="Library::com.lagradost.cloudstream3.extractors/PeaceMakerst///PointingToDeclaration//-449184558">
+  <div class="breadcrumbs"><a href="../../index.html">Library</a><span class="delimiter">/</span><a href="../index.html">com.lagradost.cloudstream3.extractors</a><span class="delimiter">/</span><span class="current">PeaceMakerst</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Peace</span><wbr><span><span>Makerst</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">PeaceMakerst</a> : <a href="../../com.lagradost.cloudstream3.utils/-extractor-api/index.html">ExtractorApi</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/recloudstream/cloudstream/tree/master/library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/PeaceMakerstExtractor.kt#L10">source</a>)</span></span></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-h-d-stream-able/index.html">HDStreamAble</a></div></span></div><div></div></div></div></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1246800468%2FConstructors%2F-449184558" anchor-label="PeaceMakerst" id="-1246800468%2FConstructors%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-peace-makerst.html"><span>Peace</span><wbr><span><span>Makerst</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1246800468%2FConstructors%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="639180891%2FClasslikes%2F-449184558" anchor-label="PeaceResponse" id="639180891%2FClasslikes%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-peace-response/index.html"><span>Peace</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="639180891%2FClasslikes%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-peace-response/index.html">PeaceResponse</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>videoImage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>videoSources<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-video-source/index.html">PeaceMakerst.VideoSource</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sIndex<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sourceList<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1056895537%2FClasslikes%2F-449184558" anchor-label="Teve2ApiResponse" id="-1056895537%2FClasslikes%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-teve2-api-response/index.html"><span>Teve2Api</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1056895537%2FClasslikes%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-teve2-api-response/index.html">Teve2ApiResponse</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>media<span class="token operator">: </span><a href="-teve2-media/index.html">PeaceMakerst.Teve2Media</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-647888418%2FClasslikes%2F-449184558" anchor-label="Teve2Link" id="-647888418%2FClasslikes%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-teve2-link/index.html"><span><span>Teve2Link</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-647888418%2FClasslikes%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-teve2-link/index.html">Teve2Link</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>serviceUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>securePath<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1386132154%2FClasslikes%2F-449184558" anchor-label="Teve2Media" id="-1386132154%2FClasslikes%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-teve2-media/index.html"><span><span>Teve2Media</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1386132154%2FClasslikes%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-teve2-media/index.html">Teve2Media</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>link<span class="token operator">: </span><a href="-teve2-link/index.html">PeaceMakerst.Teve2Link</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1213079340%2FClasslikes%2F-449184558" anchor-label="VideoSource" id="-1213079340%2FClasslikes%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-video-source/index.html"><span>Video</span><wbr><span><span>Source</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1213079340%2FClasslikes%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-video-source/index.html">VideoSource</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>file<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>label<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>type<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1855575487%2FProperties%2F-449184558" anchor-label="mainUrl" id="-1855575487%2FProperties%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="main-url.html"><span>main</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1855575487%2FProperties%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="main-url.html">mainUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="808365848%2FProperties%2F-449184558" anchor-label="name" id="808365848%2FProperties%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="808365848%2FProperties%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-486601800%2FProperties%2F-449184558" anchor-label="requiresReferer" id="-486601800%2FProperties%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="requires-referer.html"><span>requires</span><wbr><span><span>Referer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-486601800%2FProperties%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="requires-referer.html">requiresReferer</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1729049334%2FProperties%2F-449184558" anchor-label="sourcePlugin" id="1729049334%2FProperties%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.utils/-extractor-api/source-plugin.html"><span>source</span><wbr><span><span>Plugin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1729049334%2FProperties%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3.utils/-extractor-api/source-plugin.html">sourcePlugin</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Determines which plugin a given provider is from. This is the full path to the plugin.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="602323751%2FFunctions%2F-449184558" anchor-label="fixUrl" id="602323751%2FFunctions%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.utils/fix-url.html"><span>fix</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="602323751%2FFunctions%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.utils/-extractor-api/index.html">ExtractorApi</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3.utils/fix-url.html"><span class="token function">fixUrl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1396149103%2FFunctions%2F-449184558" anchor-label="getExtractorUrl" id="1396149103%2FFunctions%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.utils/-extractor-api/get-extractor-url.html"><span>get</span><wbr><span>Extractor</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1396149103%2FFunctions%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.utils/-extractor-api/get-extractor-url.html"><span class="token function">getExtractorUrl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1442706769%2FFunctions%2F-449184558" anchor-label="getSafeUrl" id="1442706769%2FFunctions%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.utils/-extractor-api/get-safe-url.html"><span>get</span><wbr><span>Safe</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1442706769%2FFunctions%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.utils/-extractor-api/get-safe-url.html"><span class="token function">getSafeUrl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">referer<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">subtitleCallback<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.lagradost.cloudstream3/-subtitle-file/index.html">SubtitleFile</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.lagradost.cloudstream3.utils/-extractor-link/index.html">ExtractorLink</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-879752910%2FFunctions%2F-449184558" anchor-label="getUrl" id="-879752910%2FFunctions%2F-449184558" data-filterable-set=":library/commonMain"></a>
+          <div class="table-row" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-url.html"><span>get</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-879752910%2FFunctions%2F-449184558"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":library/commonMain" data-filterable-set=":library/commonMain" data-active="" data-toggle=":library/commonMain">common</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":library/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="get-url.html"><span class="token function">getUrl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">referer<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">subtitleCallback<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.lagradost.cloudstream3/-subtitle-file/index.html">SubtitleFile</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../com.lagradost.cloudstream3.utils/-extractor-link/index.html">ExtractorLink</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.utils/-extractor-api/get-url.html"><span class="token function">getUrl</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">referer<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.lagradost.cloudstream3.utils/-extractor-link/index.html">ExtractorLink</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Will throw errors, use getSafeUrl if you don't want to handle the exception yourself</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
