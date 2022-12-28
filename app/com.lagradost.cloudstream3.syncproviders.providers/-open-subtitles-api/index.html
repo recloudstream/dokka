@@ -1,0 +1,705 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OpenSubtitlesApi</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    Cloudstream
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":app/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":app/main" data-filter=":app/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Cloudstream
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="App::com.lagradost.cloudstream3.syncproviders.providers/OpenSubtitlesApi///PointingToDeclaration//-1319486001">
+  <div class="breadcrumbs"><a href="../../index.html">App</a><span class="delimiter">/</span><a href="../index.html">com.lagradost.cloudstream3.syncproviders.providers</a><span class="delimiter">/</span><span class="current">OpenSubtitlesApi</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Open</span><wbr><span>Subtitles</span><wbr><span><span>Api</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">OpenSubtitlesApi</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">index<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span> : <a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i-manager/index.html">InAppAuthAPIManager</a>, <a href="../../com.lagradost.cloudstream3.subtitles/-abstract-sub-api/index.html">AbstractSubApi</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/recloudstream/cloudstream/tree/master/app/src/main/java/com/lagradost/cloudstream3/syncproviders/providers/OpenSubtitlesApi.kt#L22">source</a>)</span></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1591370882%2FConstructors%2F-1319486001" anchor-label="OpenSubtitlesApi" id="1591370882%2FConstructors%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-subtitles-api.html"><span>Open</span><wbr><span>Subtitles</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1591370882%2FConstructors%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">index<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-798611788%2FClasslikes%2F-1319486001" anchor-label="Companion" id="-798611788%2FClasslikes%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-798611788%2FClasslikes%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-976052544%2FClasslikes%2F-1319486001" anchor-label="OAuthToken" id="-976052544%2FClasslikes%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-auth-token/index.html"><span>OAuth</span><wbr><span><span>Token</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-976052544%2FClasslikes%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-o-auth-token/index.html">OAuthToken</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>token<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>status<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2080365970%2FClasslikes%2F-1319486001" anchor-label="ResultAttributes" id="-2080365970%2FClasslikes%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-result-attributes/index.html"><span>Result</span><wbr><span><span>Attributes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2080365970%2FClasslikes%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-result-attributes/index.html">ResultAttributes</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>subtitleId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>language<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>release<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>files<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-result-files/index.html">OpenSubtitlesApi.ResultFiles</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>listOf()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>featDetails<span class="token operator">: </span><a href="-result-feature-details/index.html">OpenSubtitlesApi.ResultFeatureDetails</a><span class="token operator">?</span><span class="token operator"> = </span>ResultFeatureDetails()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>hearingImpaired<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1940842107%2FClasslikes%2F-1319486001" anchor-label="ResultData" id="1940842107%2FClasslikes%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-result-data/index.html"><span>Result</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1940842107%2FClasslikes%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-result-data/index.html">ResultData</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>type<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>attributes<span class="token operator">: </span><a href="-result-attributes/index.html">OpenSubtitlesApi.ResultAttributes</a><span class="token operator">?</span><span class="token operator"> = </span>ResultAttributes()</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="943194243%2FClasslikes%2F-1319486001" anchor-label="ResultDownloadLink" id="943194243%2FClasslikes%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-result-download-link/index.html"><span>Result</span><wbr><span>Download</span><wbr><span><span>Link</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="943194243%2FClasslikes%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-result-download-link/index.html">ResultDownloadLink</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>link<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>fileName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>requests<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>remaining<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>resetTime<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>resetTimeUtc<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="166483193%2FClasslikes%2F-1319486001" anchor-label="ResultFeatureDetails" id="166483193%2FClasslikes%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-result-feature-details/index.html"><span>Result</span><wbr><span>Feature</span><wbr><span><span>Details</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="166483193%2FClasslikes%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-result-feature-details/index.html">ResultFeatureDetails</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>year<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>title<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>movieName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>imdbId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>tmdbId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>seasonNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>episodeNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>parentImdbId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>parentTitle<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>parentTmdbId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>parentFeatureId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1477662362%2FClasslikes%2F-1319486001" anchor-label="ResultFiles" id="-1477662362%2FClasslikes%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-result-files/index.html"><span>Result</span><wbr><span><span>Files</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1477662362%2FClasslikes%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-result-files/index.html">ResultFiles</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>fileId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>fileName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1859125046%2FClasslikes%2F-1319486001" anchor-label="Results" id="-1859125046%2FClasslikes%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-results/index.html"><span><span>Results</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1859125046%2FClasslikes%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-results/index.html">Results</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>data<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-result-data/index.html">OpenSubtitlesApi.ResultData</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>listOf()</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="139649406%2FClasslikes%2F-1319486001" anchor-label="SubtitleOAuthEntity" id="139649406%2FClasslikes%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-subtitle-o-auth-entity/index.html"><span>Subtitle</span><wbr><span>OAuth</span><wbr><span><span>Entity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="139649406%2FClasslikes%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-subtitle-o-auth-entity/index.html">SubtitleOAuthEntity</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>user<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>pass<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>accessToken<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-954359846%2FProperties%2F-1319486001" anchor-label="accountId" id="-954359846%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/account-id.html"><span>account</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-954359846%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/account-id.html">accountId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-693258413%2FProperties%2F-1319486001" anchor-label="accountIndex" id="-693258413%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/account-index.html"><span>account</span><wbr><span><span>Index</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-693258413%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/account-index.html">accountIndex</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1024540591%2FProperties%2F-1319486001" anchor-label="createAccountUrl" id="1024540591%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-account-url.html"><span>create</span><wbr><span>Account</span><wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1024540591%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="create-account-url.html">createAccountUrl</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-72601164%2FProperties%2F-1319486001" anchor-label="icon" id="-72601164%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="icon.html"><span><span>icon</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-72601164%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="icon.html">icon</a><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1691744544%2FProperties%2F-1319486001" anchor-label="idPrefix" id="1691744544%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id-prefix.html"><span>id</span><wbr><span><span>Prefix</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1691744544%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="id-prefix.html">idPrefix</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1699974114%2FProperties%2F-1319486001" anchor-label="name" id="1699974114%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1699974114%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-873043119%2FProperties%2F-1319486001" anchor-label="requiresEmail" id="-873043119%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i-manager/requires-email.html"><span>requires</span><wbr><span><span>Email</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-873043119%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i-manager/requires-email.html">requiresEmail</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-874006492%2FProperties%2F-1319486001" anchor-label="requiresLogin" id="-874006492%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i-manager/requires-login.html"><span>requires</span><wbr><span><span>Login</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-874006492%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i-manager/requires-login.html">requiresLogin</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1579976644%2FProperties%2F-1319486001" anchor-label="requiresPassword" id="1579976644%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="requires-password.html"><span>requires</span><wbr><span><span>Password</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1579976644%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="requires-password.html">requiresPassword</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1788706774%2FProperties%2F-1319486001" anchor-label="requiresServer" id="-1788706774%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i-manager/requires-server.html"><span>requires</span><wbr><span><span>Server</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1788706774%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i-manager/requires-server.html">requiresServer</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2056871447%2FProperties%2F-1319486001" anchor-label="requiresUsername" id="-2056871447%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="requires-username.html"><span>requires</span><wbr><span><span>Username</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2056871447%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="requires-username.html">requiresUsername</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="159098106%2FProperties%2F-1319486001" anchor-label="storesPasswordInPlainText" id="159098106%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i-manager/stores-password-in-plain-text.html"><span>stores</span><wbr><span>Password</span><wbr><span>In</span><wbr><span>Plain</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="159098106%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i-manager/stores-password-in-plain-text.html">storesPasswordInPlainText</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="804742691%2FFunctions%2F-1319486001" anchor-label="changeAccount" id="804742691%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/change-account.html"><span>change</span><wbr><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="804742691%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/change-account.html"><span class="token function">changeAccount</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">index<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1502685158%2FFunctions%2F-1319486001" anchor-label="getAccounts" id="1502685158%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/get-accounts.html"><span>get</span><wbr><span><span>Accounts</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1502685158%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/get-accounts.html"><span class="token function">getAccounts</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int-array/index.html">IntArray</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1350733847%2FFunctions%2F-1319486001" anchor-label="getLatestLoginData" id="1350733847%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-latest-login-data.html"><span>get</span><wbr><span>Latest</span><wbr><span>Login</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1350733847%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="get-latest-login-data.html"><span class="token function">getLatestLoginData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i/-login-data/index.html">InAppAuthAPI.LoginData</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2012270442%2FFunctions%2F-1319486001" anchor-label="getResource" id="-2012270442%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.subtitles/-abstract-sub-provider/get-resource.html"><span>get</span><wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2012270442%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/WorkerThread.html"><span class="token annotation builtin">WorkerThread</span></a></div></div><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.subtitles/-abstract-sub-provider/get-resource.html"><span class="token function">getResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.subtitles/-abstract-subtitle-entities/-subtitle-entity/index.html">AbstractSubtitleEntities.SubtitleEntity</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.subtitles/-subtitle-resource/index.html">SubtitleResource</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1889213754%2FFunctions%2F-1319486001" anchor-label="getResources" id="-1889213754%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.subtitles/-abstract-sub-provider/get-resources.html"><span>get</span><wbr><span><span>Resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1889213754%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/WorkerThread.html"><span class="token annotation builtin">WorkerThread</span></a></div></div><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.subtitles/-subtitle-resource/index.html">SubtitleResource</a><span class="token punctuation">.</span><a href="../../com.lagradost.cloudstream3.subtitles/-abstract-sub-provider/get-resources.html"><span class="token function">getResources</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.subtitles/-abstract-subtitle-entities/-subtitle-entity/index.html">AbstractSubtitleEntities.SubtitleEntity</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-295231928%2FFunctions%2F-1319486001" anchor-label="init" id="-295231928%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/init.html"><span><span>init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-295231928%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/init.html"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="395935357%2FFunctions%2F-1319486001" anchor-label="initialize" id="395935357%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="initialize.html"><span><span>initialize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="395935357%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="initialize.html"><span class="token function">initialize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-363836338%2FFunctions%2F-1319486001" anchor-label="load" id="-363836338%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="load.html"><span><span>load</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-363836338%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="load.html"><span class="token function">load</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.subtitles/-abstract-subtitle-entities/-subtitle-entity/index.html">AbstractSubtitleEntities.SubtitleEntity</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1181688166%2FFunctions%2F-1319486001" anchor-label="login" id="-1181688166%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="login.html"><span><span>login</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1181688166%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="login.html"><span class="token function">login</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.syncproviders/-in-app-auth-a-p-i/-login-data/index.html">InAppAuthAPI.LoginData</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="806434198%2FFunctions%2F-1319486001" anchor-label="loginInfo" id="806434198%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="login-info.html"><span>login</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="806434198%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="login-info.html"><span class="token function">loginInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.syncproviders/-auth-a-p-i/-login-info/index.html">AuthAPI.LoginInfo</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1270202909%2FFunctions%2F-1319486001" anchor-label="logOut" id="-1270202909%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="log-out.html"><span>log</span><wbr><span><span>Out</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1270202909%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="log-out.html"><span class="token function">logOut</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1209323640%2FFunctions%2F-1319486001" anchor-label="registerAccount" id="1209323640%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/register-account.html"><span>register</span><wbr><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1209323640%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/register-account.html"><span class="token function">registerAccount</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1213545979%2FFunctions%2F-1319486001" anchor-label="removeAccountKeys" id="-1213545979%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/remove-account-keys.html"><span>remove</span><wbr><span>Account</span><wbr><span><span>Keys</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1213545979%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/remove-account-keys.html"><span class="token function">removeAccountKeys</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="372828519%2FFunctions%2F-1319486001" anchor-label="search" id="372828519%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="search.html"><span><span>search</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="372828519%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="search.html"><span class="token function">search</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">query<span class="token operator">: </span><a href="../../com.lagradost.cloudstream3.subtitles/-abstract-subtitle-entities/-subtitle-search/index.html">AbstractSubtitleEntities.SubtitleSearch</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.lagradost.cloudstream3.subtitles/-abstract-subtitle-entities/-subtitle-entity/index.html">AbstractSubtitleEntities.SubtitleEntity</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Fetch subtitles using token authenticated on previous method (see authorize). Returns list of Subtitles which user can select to download (see load).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1238769404%2FFunctions%2F-1319486001" anchor-label="switchToNewAccount" id="1238769404%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/switch-to-new-account.html"><span>switch</span><wbr><span>To</span><wbr><span>New</span><wbr><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1238769404%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/switch-to-new-account.html"><span class="token function">switchToNewAccount</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="92948355%2FFunctions%2F-1319486001" anchor-label="switchToOldAccount" id="92948355%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/switch-to-old-account.html"><span>switch</span><wbr><span>To</span><wbr><span>Old</span><wbr><span><span>Account</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="92948355%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">protected </span><span class="token keyword">fun </span><a href="../../com.lagradost.cloudstream3.syncproviders/-account-manager/switch-to-old-account.html"><span class="token function">switchToOldAccount</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
