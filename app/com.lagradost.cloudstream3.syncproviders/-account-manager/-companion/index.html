@@ -1,0 +1,457 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Companion</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../../index.html">
+                    Cloudstream
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":app/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":app/main" data-filter=":app/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    Cloudstream
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="App::com.lagradost.cloudstream3.syncproviders/AccountManager.Companion///PointingToDeclaration//-1319486001">
+  <div class="breadcrumbs"><a href="../../../index.html">App</a><span class="delimiter">/</span><a href="../../index.html">com.lagradost.cloudstream3.syncproviders</a><span class="delimiter">/</span><a href="../index.html">AccountManager</a><span class="delimiter">/</span><span class="current">Companion</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Companion</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Companion</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/recloudstream/cloudstream/tree/master/app/src/main/java/com/lagradost/cloudstream3/syncproviders/AccountManager.kt#L11">source</a>)</span></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-239969615%2FProperties%2F-1319486001" anchor-label="accountManagers" id="-239969615%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="account-managers.html"><span>account</span><wbr><span><span>Managers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-239969615%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="account-managers.html">accountManagers</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../index.html">AccountManager</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-237962501%2FProperties%2F-1319486001" anchor-label="addic7ed" id="-237962501%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="addic7ed.html"><span><span>addic7ed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-237962501%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="addic7ed.html">addic7ed</a><span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.syncproviders.providers/-addic7ed/index.html">Addic7ed</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1047983350%2FProperties%2F-1319486001" anchor-label="aniListApi" id="1047983350%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ani-list-api.html"><span>ani</span><wbr><span>List</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1047983350%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="ani-list-api.html">aniListApi</a><span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.syncproviders.providers/-ani-list-api/index.html">AniListApi</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1485439719%2FProperties%2F-1319486001" anchor-label="APP_STRING" id="1485439719%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-p-p_-s-t-r-i-n-g.html"><span>APP_</span><wbr><span>STRING</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1485439719%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-a-p-p_-s-t-r-i-n-g.html">APP_STRING</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-3033773%2FProperties%2F-1319486001" anchor-label="APP_STRING_PLAYER" id="-3033773%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-p-p_-s-t-r-i-n-g_-p-l-a-y-e-r.html"><span>APP_</span><wbr><span>STRING_</span><wbr><span>PLAYER</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-3033773%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-a-p-p_-s-t-r-i-n-g_-p-l-a-y-e-r.html">APP_STRING_PLAYER</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="232517538%2FProperties%2F-1319486001" anchor-label="APP_STRING_REPO" id="232517538%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-p-p_-s-t-r-i-n-g_-r-e-p-o.html"><span>APP_</span><wbr><span>STRING_</span><wbr><span>REPO</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="232517538%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-a-p-p_-s-t-r-i-n-g_-r-e-p-o.html">APP_STRING_REPO</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1459609441%2FProperties%2F-1319486001" anchor-label="APP_STRING_RESUME_WATCHING" id="1459609441%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-p-p_-s-t-r-i-n-g_-r-e-s-u-m-e_-w-a-t-c-h-i-n-g.html"><span>APP_</span><wbr><span>STRING_</span><wbr><span>RESUME_</span><wbr><span>WATCHING</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1459609441%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-a-p-p_-s-t-r-i-n-g_-r-e-s-u-m-e_-w-a-t-c-h-i-n-g.html">APP_STRING_RESUME_WATCHING</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="519882860%2FProperties%2F-1319486001" anchor-label="APP_STRING_SEARCH" id="519882860%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-p-p_-s-t-r-i-n-g_-s-e-a-r-c-h.html"><span>APP_</span><wbr><span>STRING_</span><wbr><span>SEARCH</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="519882860%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-a-p-p_-s-t-r-i-n-g_-s-e-a-r-c-h.html">APP_STRING_SEARCH</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-841115513%2FProperties%2F-1319486001" anchor-label="inAppAuths" id="-841115513%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="in-app-auths.html"><span>in</span><wbr><span>App</span><wbr><span><span>Auths</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-841115513%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="in-app-auths.html">inAppAuths</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../-in-app-auth-a-p-i-manager/index.html">InAppAuthAPIManager</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1257942085%2FProperties%2F-1319486001" anchor-label="localListApi" id="1257942085%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="local-list-api.html"><span>local</span><wbr><span>List</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1257942085%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="local-list-api.html">localListApi</a><span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.syncproviders.providers/-local-list/index.html">LocalList</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1253635380%2FProperties%2F-1319486001" anchor-label="malApi" id="1253635380%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mal-api.html"><span>mal</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1253635380%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="mal-api.html">malApi</a><span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.syncproviders.providers/-m-a-l-api/index.html">MALApi</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2004135610%2FProperties%2F-1319486001" anchor-label="MAX_STALE" id="-2004135610%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-a-x_-s-t-a-l-e.html"><span>MAX_</span><wbr><span>STALE</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2004135610%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">const </span><span class="token keyword">val </span><a href="-m-a-x_-s-t-a-l-e.html">MAX_STALE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1371140638%2FProperties%2F-1319486001" anchor-label="OAuth2Apis" id="-1371140638%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-auth2-apis.html"><span><span>OAuth2Apis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1371140638%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o-auth2-apis.html">OAuth2Apis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../-o-auth2-a-p-i/index.html">OAuth2API</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="107424077%2FProperties%2F-1319486001" anchor-label="openSubtitlesApi" id="107424077%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="open-subtitles-api.html"><span>open</span><wbr><span>Subtitles</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="107424077%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="open-subtitles-api.html">openSubtitlesApi</a><span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.syncproviders.providers/-open-subtitles-api/index.html">OpenSubtitlesApi</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1926660588%2FProperties%2F-1319486001" anchor-label="simklApi" id="-1926660588%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simkl-api.html"><span>simkl</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1926660588%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="simkl-api.html">simklApi</a><span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.syncproviders.providers/-simkl-api/index.html">SimklApi</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-283263868%2FProperties%2F-1319486001" anchor-label="subDlApi" id="-283263868%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sub-dl-api.html"><span>sub</span><wbr><span>Dl</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-283263868%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="sub-dl-api.html">subDlApi</a><span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.syncproviders.providers/-sub-dl-api/index.html">SubDlApi</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1584310551%2FProperties%2F-1319486001" anchor-label="subSourceApi" id="1584310551%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sub-source-api.html"><span>sub</span><wbr><span>Source</span><wbr><span><span>Api</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1584310551%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="sub-source-api.html">subSourceApi</a><span class="token operator">: </span><a href="../../../com.lagradost.cloudstream3.syncproviders.providers/-sub-source-api/index.html">SubSourceApi</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-793140966%2FProperties%2F-1319486001" anchor-label="subtitleProviders" id="-793140966%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="subtitle-providers.html"><span>subtitle</span><wbr><span><span>Providers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-793140966%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="subtitle-providers.html">subtitleProviders</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../com.lagradost.cloudstream3.subtitles/-abstract-sub-provider/index.html">AbstractSubProvider</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="737421794%2FProperties%2F-1319486001" anchor-label="SyncApis" id="737421794%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sync-apis.html"><span>Sync</span><wbr><span><span>Apis</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="737421794%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="-sync-apis.html">SyncApis</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../-sync-repo/index.html">SyncRepo</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-188807295%2FProperties%2F-1319486001" anchor-label="unixTime" id="-188807295%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unix-time.html"><span>unix</span><wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-188807295%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="unix-time.html">unixTime</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-361265285%2FProperties%2F-1319486001" anchor-label="unixTimeMs" id="-361265285%2FProperties%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unix-time-ms.html"><span>unix</span><wbr><span>Time</span><wbr><span><span>Ms</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-361265285%2FProperties%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="unix-time-ms.html">unixTimeMs</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="678230301%2FFunctions%2F-1319486001" anchor-label="secondsToReadable" id="678230301%2FFunctions%2F-1319486001" data-filterable-set=":app/main"></a>
+          <div class="table-row" data-filterable-current=":app/main" data-filterable-set=":app/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="seconds-to-readable.html"><span>seconds</span><wbr><span>To</span><wbr><span><span>Readable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="678230301%2FFunctions%2F-1319486001"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="seconds-to-readable.html"><span class="token function">secondsToReadable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">seconds<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">completedValue<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
