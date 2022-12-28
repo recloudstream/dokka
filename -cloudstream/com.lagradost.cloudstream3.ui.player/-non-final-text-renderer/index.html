@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>NonFinalTextRenderer</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            Cloudstream
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":app:dokkaHtml/stableRelease">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="Cloudstream::com.lagradost.cloudstream3.ui.player/NonFinalTextRenderer///PointingToDeclaration//101969414">
+  <div class="breadcrumbs"><a href="../../../index.html">Cloudstream</a><span class="delimiter">/</span><a href="../index.html">com.lagradost.cloudstream3.ui.player</a><span class="delimiter">/</span><span class="current">NonFinalTextRenderer</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Non</span><wbr></wbr><span>Final</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Renderer</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/common/util/UnstableApi.html"><span class="token annotation builtin">UnstableApi</span></a></div></div><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">NonFinalTextRenderer</a> : <a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/BaseRenderer.html">BaseRenderer</a>, <a href="https://developer.android.com/reference/kotlin/android/os/Handler.Callback.html">Handler.Callback</a></div><p class="paragraph">A renderer for text. </p><p class="paragraph"><a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/text/Subtitle.html">Subtitle</a>s are decoded from sample data using <a href="https://developer.android.com/reference/kotlin/androidx/media3/extractor/text/SubtitleDecoder.html">SubtitleDecoder</a> instances obtained from a <a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/text/SubtitleDecoderFactory.html">SubtitleDecoderFactory</a>. The actual rendering of the subtitle <a href="https://developer.android.com/reference/kotlin/androidx/media3/common/text/Cue.html">Cue</a>s is delegated to a <a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/text/TextOutput.html">TextOutput</a>.</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-custom-text-renderer/index.html">CustomTextRenderer</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="720400856%2FConstructors%2F101969414" anchor-label="NonFinalTextRenderer" id="720400856%2FConstructors%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-non-final-text-renderer.html"><span>Non</span><wbr></wbr><span>Final</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Renderer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="720400856%2FConstructors%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">trackType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>outputHandler<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Handler.html">Handler</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">output<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/text/TextOutput.html">TextOutput</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>outputLooper<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Looper.html">Looper</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">output<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/text/TextOutput.html">TextOutput</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>outputLooper<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Looper.html">Looper</a><span class="token punctuation">, </span></span><span class="parameter ">decoderFactory<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/text/SubtitleDecoderFactory.html">SubtitleDecoderFactory</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1674063611%2FProperties%2F101969414" anchor-label="ADAPTIVE_NOT_SEAMLESS" id="1674063611%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1674063611%2FProperties%2F101969414"><span><span>ADAPTIVE_NOT_SEAMLESS</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1674063611%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1674063611%2FProperties%2F101969414">ADAPTIVE_NOT_SEAMLESS</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">8</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="473114010%2FProperties%2F101969414" anchor-label="ADAPTIVE_NOT_SUPPORTED" id="473114010%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#473114010%2FProperties%2F101969414"><span><span>ADAPTIVE_NOT_SUPPORTED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="473114010%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#473114010%2FProperties%2F101969414">ADAPTIVE_NOT_SUPPORTED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1087500793%2FProperties%2F101969414" anchor-label="ADAPTIVE_SEAMLESS" id="-1087500793%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1087500793%2FProperties%2F101969414"><span><span>ADAPTIVE_SEAMLESS</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1087500793%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-1087500793%2FProperties%2F101969414">ADAPTIVE_SEAMLESS</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">16</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="856395842%2FProperties%2F101969414" anchor-label="ADAPTIVE_SUPPORT_MASK" id="856395842%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#856395842%2FProperties%2F101969414"><span><span>ADAPTIVE_SUPPORT_MASK</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="856395842%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#856395842%2FProperties%2F101969414">ADAPTIVE_SUPPORT_MASK</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">24</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1130060186%2FProperties%2F101969414" anchor-label="DECODER_SUPPORT_FALLBACK" id="-1130060186%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1130060186%2FProperties%2F101969414"><span><span>DECODER_SUPPORT_FALLBACK</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1130060186%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-1130060186%2FProperties%2F101969414">DECODER_SUPPORT_FALLBACK</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1003603207%2FProperties%2F101969414" anchor-label="DECODER_SUPPORT_FALLBACK_MIMETYPE" id="1003603207%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1003603207%2FProperties%2F101969414"><span><span>DECODER_SUPPORT_FALLBACK_MIMETYPE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1003603207%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1003603207%2FProperties%2F101969414">DECODER_SUPPORT_FALLBACK_MIMETYPE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">256</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1681162096%2FProperties%2F101969414" anchor-label="DECODER_SUPPORT_PRIMARY" id="1681162096%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1681162096%2FProperties%2F101969414"><span><span>DECODER_SUPPORT_PRIMARY</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1681162096%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1681162096%2FProperties%2F101969414">DECODER_SUPPORT_PRIMARY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">128</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2048627561%2FProperties%2F101969414" anchor-label="FORMAT_EXCEEDS_CAPABILITIES" id="2048627561%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2048627561%2FProperties%2F101969414"><span><span>FORMAT_EXCEEDS_CAPABILITIES</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2048627561%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#2048627561%2FProperties%2F101969414">FORMAT_EXCEEDS_CAPABILITIES</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1714576097%2FProperties%2F101969414" anchor-label="FORMAT_HANDLED" id="-1714576097%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1714576097%2FProperties%2F101969414"><span><span>FORMAT_HANDLED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1714576097%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-1714576097%2FProperties%2F101969414">FORMAT_HANDLED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">4</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1286825859%2FProperties%2F101969414" anchor-label="FORMAT_SUPPORT_MASK" id="1286825859%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1286825859%2FProperties%2F101969414"><span><span>FORMAT_SUPPORT_MASK</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1286825859%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1286825859%2FProperties%2F101969414">FORMAT_SUPPORT_MASK</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">7</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="58290182%2FProperties%2F101969414" anchor-label="FORMAT_UNSUPPORTED_DRM" id="58290182%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#58290182%2FProperties%2F101969414"><span><span>FORMAT_UNSUPPORTED_DRM</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="58290182%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#58290182%2FProperties%2F101969414">FORMAT_UNSUPPORTED_DRM</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">2</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1806043275%2FProperties%2F101969414" anchor-label="FORMAT_UNSUPPORTED_SUBTYPE" id="1806043275%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1806043275%2FProperties%2F101969414"><span><span>FORMAT_UNSUPPORTED_SUBTYPE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1806043275%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1806043275%2FProperties%2F101969414">FORMAT_UNSUPPORTED_SUBTYPE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1252750811%2FProperties%2F101969414" anchor-label="FORMAT_UNSUPPORTED_TYPE" id="1252750811%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1252750811%2FProperties%2F101969414"><span><span>FORMAT_UNSUPPORTED_TYPE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1252750811%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1252750811%2FProperties%2F101969414">FORMAT_UNSUPPORTED_TYPE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1901020109%2FProperties%2F101969414" anchor-label="HARDWARE_ACCELERATION_NOT_SUPPORTED" id="1901020109%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1901020109%2FProperties%2F101969414"><span><span>HARDWARE_ACCELERATION_NOT_SUPPORTED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1901020109%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1901020109%2FProperties%2F101969414">HARDWARE_ACCELERATION_NOT_SUPPORTED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1314299985%2FProperties%2F101969414" anchor-label="HARDWARE_ACCELERATION_SUPPORT_MASK" id="-1314299985%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1314299985%2FProperties%2F101969414"><span><span>HARDWARE_ACCELERATION_SUPPORT_MASK</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1314299985%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-1314299985%2FProperties%2F101969414">HARDWARE_ACCELERATION_SUPPORT_MASK</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">64</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="49960897%2FProperties%2F101969414" anchor-label="HARDWARE_ACCELERATION_SUPPORTED" id="49960897%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#49960897%2FProperties%2F101969414"><span><span>HARDWARE_ACCELERATION_SUPPORTED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="49960897%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#49960897%2FProperties%2F101969414">HARDWARE_ACCELERATION_SUPPORTED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">64</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1104312657%2FProperties%2F101969414" anchor-label="MODE_SUPPORT_MASK" id="-1104312657%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1104312657%2FProperties%2F101969414"><span><span>MODE_SUPPORT_MASK</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1104312657%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-1104312657%2FProperties%2F101969414">MODE_SUPPORT_MASK</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">384</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1605507452%2FProperties%2F101969414" anchor-label="MSG_CUSTOM_BASE" id="1605507452%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1605507452%2FProperties%2F101969414"><span><span>MSG_CUSTOM_BASE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1605507452%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1605507452%2FProperties%2F101969414">MSG_CUSTOM_BASE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">10000</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="732934274%2FProperties%2F101969414" anchor-label="MSG_SET_AUDIO_ATTRIBUTES" id="732934274%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#732934274%2FProperties%2F101969414"><span><span>MSG_SET_AUDIO_ATTRIBUTES</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="732934274%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#732934274%2FProperties%2F101969414">MSG_SET_AUDIO_ATTRIBUTES</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-427663627%2FProperties%2F101969414" anchor-label="MSG_SET_AUDIO_SESSION_ID" id="-427663627%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-427663627%2FProperties%2F101969414"><span><span>MSG_SET_AUDIO_SESSION_ID</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-427663627%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-427663627%2FProperties%2F101969414">MSG_SET_AUDIO_SESSION_ID</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">10</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1264438665%2FProperties%2F101969414" anchor-label="MSG_SET_AUX_EFFECT_INFO" id="-1264438665%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1264438665%2FProperties%2F101969414"><span><span>MSG_SET_AUX_EFFECT_INFO</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1264438665%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-1264438665%2FProperties%2F101969414">MSG_SET_AUX_EFFECT_INFO</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">6</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-550860385%2FProperties%2F101969414" anchor-label="MSG_SET_CAMERA_MOTION_LISTENER" id="-550860385%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-550860385%2FProperties%2F101969414"><span><span>MSG_SET_CAMERA_MOTION_LISTENER</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-550860385%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-550860385%2FProperties%2F101969414">MSG_SET_CAMERA_MOTION_LISTENER</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">8</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1366419313%2FProperties%2F101969414" anchor-label="MSG_SET_CHANGE_FRAME_RATE_STRATEGY" id="1366419313%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1366419313%2FProperties%2F101969414"><span><span>MSG_SET_CHANGE_FRAME_RATE_STRATEGY</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1366419313%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1366419313%2FProperties%2F101969414">MSG_SET_CHANGE_FRAME_RATE_STRATEGY</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">5</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-577866043%2FProperties%2F101969414" anchor-label="MSG_SET_PREFERRED_AUDIO_DEVICE" id="-577866043%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-577866043%2FProperties%2F101969414"><span><span>MSG_SET_PREFERRED_AUDIO_DEVICE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-577866043%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-577866043%2FProperties%2F101969414">MSG_SET_PREFERRED_AUDIO_DEVICE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">12</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2033338727%2FProperties%2F101969414" anchor-label="MSG_SET_SCALING_MODE" id="2033338727%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2033338727%2FProperties%2F101969414"><span><span>MSG_SET_SCALING_MODE</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2033338727%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#2033338727%2FProperties%2F101969414">MSG_SET_SCALING_MODE</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">4</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="556071487%2FProperties%2F101969414" anchor-label="MSG_SET_SKIP_SILENCE_ENABLED" id="556071487%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#556071487%2FProperties%2F101969414"><span><span>MSG_SET_SKIP_SILENCE_ENABLED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="556071487%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#556071487%2FProperties%2F101969414">MSG_SET_SKIP_SILENCE_ENABLED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">9</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1846294618%2FProperties%2F101969414" anchor-label="MSG_SET_VIDEO_EFFECTS" id="1846294618%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1846294618%2FProperties%2F101969414"><span><span>MSG_SET_VIDEO_EFFECTS</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1846294618%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1846294618%2FProperties%2F101969414">MSG_SET_VIDEO_EFFECTS</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">13</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1678400490%2FProperties%2F101969414" anchor-label="MSG_SET_VIDEO_FRAME_METADATA_LISTENER" id="1678400490%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1678400490%2FProperties%2F101969414"><span><span>MSG_SET_VIDEO_FRAME_METADATA_LISTENER</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1678400490%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#1678400490%2FProperties%2F101969414">MSG_SET_VIDEO_FRAME_METADATA_LISTENER</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">7</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1858507075%2FProperties%2F101969414" anchor-label="MSG_SET_VIDEO_OUTPUT" id="-1858507075%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1858507075%2FProperties%2F101969414"><span><span>MSG_SET_VIDEO_OUTPUT</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1858507075%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-1858507075%2FProperties%2F101969414">MSG_SET_VIDEO_OUTPUT</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1530930990%2FProperties%2F101969414" anchor-label="MSG_SET_VIDEO_OUTPUT_RESOLUTION" id="-1530930990%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1530930990%2FProperties%2F101969414"><span><span>MSG_SET_VIDEO_OUTPUT_RESOLUTION</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1530930990%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-1530930990%2FProperties%2F101969414">MSG_SET_VIDEO_OUTPUT_RESOLUTION</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">14</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1263267224%2FProperties%2F101969414" anchor-label="MSG_SET_VOLUME" id="-1263267224%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1263267224%2FProperties%2F101969414"><span><span>MSG_SET_VOLUME</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1263267224%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-1263267224%2FProperties%2F101969414">MSG_SET_VOLUME</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">2</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2048401828%2FProperties%2F101969414" anchor-label="MSG_SET_WAKEUP_LISTENER" id="2048401828%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2048401828%2FProperties%2F101969414"><span><span>MSG_SET_WAKEUP_LISTENER</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2048401828%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#2048401828%2FProperties%2F101969414">MSG_SET_WAKEUP_LISTENER</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">11</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2077875929%2FProperties%2F101969414" anchor-label="readingPositionUs" id="2077875929%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#2077875929%2FProperties%2F101969414"><span>reading</span><wbr></wbr><span>Position</span><wbr></wbr><span><span>Us</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2077875929%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-custom-text-renderer/index.html#2077875929%2FProperties%2F101969414">readingPositionUs</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="421290971%2FProperties%2F101969414" anchor-label="state" id="421290971%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#421290971%2FProperties%2F101969414"><span><span>state</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="421290971%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-custom-text-renderer/index.html#421290971%2FProperties%2F101969414">state</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="840861395%2FProperties%2F101969414" anchor-label="STATE_DISABLED" id="840861395%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#840861395%2FProperties%2F101969414"><span><span>STATE_DISABLED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="840861395%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#840861395%2FProperties%2F101969414">STATE_DISABLED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-462811286%2FProperties%2F101969414" anchor-label="STATE_ENABLED" id="-462811286%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-462811286%2FProperties%2F101969414"><span><span>STATE_ENABLED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-462811286%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-462811286%2FProperties%2F101969414">STATE_ENABLED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-267861462%2FProperties%2F101969414" anchor-label="STATE_STARTED" id="-267861462%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-267861462%2FProperties%2F101969414"><span><span>STATE_STARTED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-267861462%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-267861462%2FProperties%2F101969414">STATE_STARTED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">2</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="427673230%2FProperties%2F101969414" anchor-label="stream" id="427673230%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#427673230%2FProperties%2F101969414"><span><span>stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="427673230%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-custom-text-renderer/index.html#427673230%2FProperties%2F101969414">stream</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/source/SampleStream.html">SampleStream</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2074263623%2FProperties%2F101969414" anchor-label="trackType" id="2074263623%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#2074263623%2FProperties%2F101969414"><span>track</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2074263623%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-custom-text-renderer/index.html#2074263623%2FProperties%2F101969414">trackType</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-504765302%2FProperties%2F101969414" anchor-label="TUNNELING_NOT_SUPPORTED" id="-504765302%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-504765302%2FProperties%2F101969414"><span><span>TUNNELING_NOT_SUPPORTED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-504765302%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-504765302%2FProperties%2F101969414">TUNNELING_NOT_SUPPORTED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1391905966%2FProperties%2F101969414" anchor-label="TUNNELING_SUPPORT_MASK" id="-1391905966%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1391905966%2FProperties%2F101969414"><span><span>TUNNELING_SUPPORT_MASK</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1391905966%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#-1391905966%2FProperties%2F101969414">TUNNELING_SUPPORT_MASK</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">32</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2127879934%2FProperties%2F101969414" anchor-label="TUNNELING_SUPPORTED" id="2127879934%2FProperties%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2127879934%2FProperties%2F101969414"><span><span>TUNNELING_SUPPORTED</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2127879934%2FProperties%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#2127879934%2FProperties%2F101969414">TUNNELING_SUPPORTED</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">32</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="3885387%2FFunctions%2F101969414" anchor-label="clearListener" id="3885387%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#3885387%2FFunctions%2F101969414"><span>clear</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="3885387%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#3885387%2FFunctions%2F101969414"><span class="token function">clearListener</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-263101540%2FFunctions%2F101969414" anchor-label="create" id="-263101540%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-263101540%2FFunctions%2F101969414"><span><span>create</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-263101540%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-263101540%2FFunctions%2F101969414"><span class="token function">create</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">formatSupport<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1949540956%2FFunctions%2F101969414" anchor-label="disable" id="-1949540956%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#-1949540956%2FFunctions%2F101969414"><span><span>disable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1949540956%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#-1949540956%2FFunctions%2F101969414"><span class="token function">disable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1205350712%2FFunctions%2F101969414" anchor-label="enable" id="1205350712%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1205350712%2FFunctions%2F101969414"><span><span>enable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1205350712%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1205350712%2FFunctions%2F101969414"><span class="token function">enable</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configuration<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/RendererConfiguration.html">RendererConfiguration</a><span class="token punctuation">, </span></span><span class="parameter ">formats<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/common/Format.html">Format</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">stream<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/source/SampleStream.html">SampleStream</a><span class="token punctuation">, </span></span><span class="parameter ">positionUs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">joining<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">mayRenderStartOfStream<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">startPositionUs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">offsetUs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-913627805%2FFunctions%2F101969414" anchor-label="getAdaptiveSupport" id="-913627805%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-913627805%2FFunctions%2F101969414"><span>get</span><wbr></wbr><span>Adaptive</span><wbr></wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-913627805%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-913627805%2FFunctions%2F101969414"><span class="token function">getAdaptiveSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">supportFlags<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-833055776%2FFunctions%2F101969414" anchor-label="getCapabilities" id="-833055776%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#-833055776%2FFunctions%2F101969414"><span>get</span><wbr></wbr><span><span>Capabilities</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-833055776%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#-833055776%2FFunctions%2F101969414"><span class="token function">getCapabilities</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/RendererCapabilities.html">RendererCapabilities</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="117889453%2FFunctions%2F101969414" anchor-label="getDecoderSupport" id="117889453%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#117889453%2FFunctions%2F101969414"><span>get</span><wbr></wbr><span>Decoder</span><wbr></wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="117889453%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#117889453%2FFunctions%2F101969414"><span class="token function">getDecoderSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">supportFlags<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2050371262%2FFunctions%2F101969414" anchor-label="getFormatSupport" id="-2050371262%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-2050371262%2FFunctions%2F101969414"><span>get</span><wbr></wbr><span>Format</span><wbr></wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2050371262%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-2050371262%2FFunctions%2F101969414"><span class="token function">getFormatSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">supportFlags<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1396137455%2FFunctions%2F101969414" anchor-label="getHardwareAccelerationSupport" id="-1396137455%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1396137455%2FFunctions%2F101969414"><span>get</span><wbr></wbr><span>Hardware</span><wbr></wbr><span>Acceleration</span><wbr></wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1396137455%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1396137455%2FFunctions%2F101969414"><span class="token function">getHardwareAccelerationSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">supportFlags<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1834148300%2FFunctions%2F101969414" anchor-label="getMediaClock" id="1834148300%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#1834148300%2FFunctions%2F101969414"><span>get</span><wbr></wbr><span>Media</span><wbr></wbr><span><span>Clock</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1834148300%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#1834148300%2FFunctions%2F101969414"><span class="token function">getMediaClock</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/MediaClock.html">MediaClock</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1604874116%2FFunctions%2F101969414" anchor-label="getName" id="-1604874116%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-name.html"><span>get</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1604874116%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-name.html"><span class="token function">getName</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1293893815%2FFunctions%2F101969414" anchor-label="getTunnelingSupport" id="1293893815%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1293893815%2FFunctions%2F101969414"><span>get</span><wbr></wbr><span>Tunneling</span><wbr></wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1293893815%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1293893815%2FFunctions%2F101969414"><span class="token function">getTunnelingSupport</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">supportFlags<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1207249244%2FFunctions%2F101969414" anchor-label="handleMessage" id="1207249244%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1390150374%2FFunctions%2F101969414"><span>handle</span><wbr></wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1207249244%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1390150374%2FFunctions%2F101969414"><span class="token function">handleMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">messageType<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="handle-message.html"><span class="token function">handleMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">msg<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Message.html">Message</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-271188162%2FFunctions%2F101969414" anchor-label="hasReadStreamToEnd" id="-271188162%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#-271188162%2FFunctions%2F101969414"><span>has</span><wbr></wbr><span>Read</span><wbr></wbr><span>Stream</span><wbr></wbr><span>To</span><wbr></wbr><span><span>End</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-271188162%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#-271188162%2FFunctions%2F101969414"><span class="token function">hasReadStreamToEnd</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-6479461%2FFunctions%2F101969414" anchor-label="init" id="-6479461%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-6479461%2FFunctions%2F101969414"><span><span>init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-6479461%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-6479461%2FFunctions%2F101969414"><span class="token function">init</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">index<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">playerId<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/analytics/PlayerId.html">PlayerId</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1492214585%2FFunctions%2F101969414" anchor-label="isCurrentStreamFinal" id="-1492214585%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#-1492214585%2FFunctions%2F101969414"><span>is</span><wbr></wbr><span>Current</span><wbr></wbr><span>Stream</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1492214585%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#-1492214585%2FFunctions%2F101969414"><span class="token function">isCurrentStreamFinal</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-439529811%2FFunctions%2F101969414" anchor-label="isEnded" id="-439529811%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-ended.html"><span>is</span><wbr></wbr><span><span>Ended</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-439529811%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-ended.html"><span class="token function">isEnded</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1781356572%2FFunctions%2F101969414" anchor-label="isReady" id="-1781356572%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-ready.html"><span>is</span><wbr></wbr><span><span>Ready</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1781356572%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-ready.html"><span class="token function">isReady</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-908935070%2FFunctions%2F101969414" anchor-label="maybeThrowStreamError" id="-908935070%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#-908935070%2FFunctions%2F101969414"><span>maybe</span><wbr></wbr><span>Throw</span><wbr></wbr><span>Stream</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-908935070%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#-908935070%2FFunctions%2F101969414"><span class="token function">maybeThrowStreamError</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-340129435%2FFunctions%2F101969414" anchor-label="release" id="-340129435%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#-340129435%2FFunctions%2F101969414"><span><span>release</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-340129435%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#-340129435%2FFunctions%2F101969414"><span class="token function">release</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2138286872%2FFunctions%2F101969414" anchor-label="render" id="2138286872%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="render.html"><span><span>render</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2138286872%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="render.html"><span class="token function">render</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">positionUs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">elapsedRealtimeUs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2116538375%2FFunctions%2F101969414" anchor-label="replaceStream" id="-2116538375%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-2116538375%2FFunctions%2F101969414"><span>replace</span><wbr></wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2116538375%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-2116538375%2FFunctions%2F101969414"><span class="token function">replaceStream</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">formats<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/common/Format.html">Format</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">stream<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/source/SampleStream.html">SampleStream</a><span class="token punctuation">, </span></span><span class="parameter ">startPositionUs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">offsetUs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1534049501%2FFunctions%2F101969414" anchor-label="reset" id="1534049501%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#1534049501%2FFunctions%2F101969414"><span><span>reset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1534049501%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#1534049501%2FFunctions%2F101969414"><span class="token function">reset</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1465522232%2FFunctions%2F101969414" anchor-label="resetPosition" id="1465522232%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1465522232%2FFunctions%2F101969414"><span>reset</span><wbr></wbr><span><span>Position</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1465522232%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1465522232%2FFunctions%2F101969414"><span class="token function">resetPosition</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">positionUs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="513305485%2FFunctions%2F101969414" anchor-label="setCurrentStreamFinal" id="513305485%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#513305485%2FFunctions%2F101969414"><span>set</span><wbr></wbr><span>Current</span><wbr></wbr><span>Stream</span><wbr></wbr><span><span>Final</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="513305485%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#513305485%2FFunctions%2F101969414"><span class="token function">setCurrentStreamFinal</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1350985907%2FFunctions%2F101969414" anchor-label="setFinalStreamEndPositionUs" id="1350985907%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-final-stream-end-position-us.html"><span>set</span><wbr></wbr><span>Final</span><wbr></wbr><span>Stream</span><wbr></wbr><span>End</span><wbr></wbr><span>Position</span><wbr></wbr><span><span>Us</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1350985907%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-final-stream-end-position-us.html"><span class="token function">setFinalStreamEndPositionUs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">streamEndPositionUs<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Sets the position at which to stop rendering the current stream.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="68236270%2FFunctions%2F101969414" anchor-label="setListener" id="68236270%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#68236270%2FFunctions%2F101969414"><span>set</span><wbr></wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="68236270%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#68236270%2FFunctions%2F101969414"><span class="token function">setListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listener<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/RendererCapabilities.Listener.html">RendererCapabilities.Listener</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1623128602%2FFunctions%2F101969414" anchor-label="setPlaybackSpeed" id="1623128602%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1623128602%2FFunctions%2F101969414"><span>set</span><wbr></wbr><span>Playback</span><wbr></wbr><span><span>Speed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1623128602%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1623128602%2FFunctions%2F101969414"><span class="token function">setPlaybackSpeed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">currentPlaybackSpeed<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">targetPlaybackSpeed<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1036639958%2FFunctions%2F101969414" anchor-label="start" id="-1036639958%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#-1036639958%2FFunctions%2F101969414"><span><span>start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1036639958%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#-1036639958%2FFunctions%2F101969414"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2063162228%2FFunctions%2F101969414" anchor-label="stop" id="-2063162228%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#-2063162228%2FFunctions%2F101969414"><span><span>stop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2063162228%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#-2063162228%2FFunctions%2F101969414"><span class="token function">stop</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1438728608%2FFunctions%2F101969414" anchor-label="supportsFormat" id="-1438728608%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="supports-format.html"><span>supports</span><wbr></wbr><span><span>Format</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1438728608%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/media3/exoplayer/RendererCapabilities.Capabilities.html"><span class="token annotation builtin">RendererCapabilities.Capabilities</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="supports-format.html"><span class="token function">supportsFormat</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>format<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/media3/common/Format.html">Format</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1673585684%2FFunctions%2F101969414" anchor-label="supportsMixedMimeTypeAdaptation" id="1673585684%2FFunctions%2F101969414" data-filterable-set=":app:dokkaHtml/stableRelease"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/stableRelease" data-filterable-set=":app:dokkaHtml/stableRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-custom-text-renderer/index.html#1673585684%2FFunctions%2F101969414"><span>supports</span><wbr></wbr><span>Mixed</span><wbr></wbr><span>Mime</span><wbr></wbr><span>Type</span><wbr></wbr><span><span>Adaptation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1673585684%2FFunctions%2F101969414"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/stableRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-custom-text-renderer/index.html#1673585684%2FFunctions%2F101969414"><span class="token function">supportsMixedMimeTypeAdaptation</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
